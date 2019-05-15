@@ -1,0 +1,1412 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Release Notes</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DAPS 3.0.0 (https://opensuse.github.io/daps) using SUSE XSL Stylesheets 2.0.13 (based on DocBook XSL Stylesheets 1.78.1) - chunked" /><meta name="book-title" content="Release Notes" /><link rel="home" href="index.html" title="Release Notes" /><script type="text/javascript">
+
+var protocol = window.location.protocol.toLowerCase();
+if ( protocol != 'file:' ) {
+  var agent = navigator.userAgent.toLowerCase();
+  var wanted = ( protocol == 'https:') ? 'https' : 'http';
+  var file = 'fonts.css';
+  document.write('<link rel="stylesheet" type="text/css" href="' + wanted + '://static.opensuse.org/fonts/'+ file +'"></link>');
+}
+else {
+   document.write('<link rel="stylesheet" type="text/css" href="static/css/fonts-onlylocal.css"></link>');
+}
+
+</script><noscript><link rel="stylesheet" type="text/css" href="http://static.opensuse.org/fonts/fonts.css" /></noscript><script src="static/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="static/js/script.js" type="text/javascript"></script><script src="static/js/highlight.min.js" type="text/javascript"></script><script>
+
+$(document).ready(function() {
+  $('.verbatim-wrap.highlight').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+hljs.configure({
+  useBR: false
+});
+
+</script></head><body class="draft offline js-off" onload="if (document.cookie.length > 0) {if (document.cookie.indexOf('betawarn=closed') != -1){$('#betawarn').toggle()}};"><div id="betawarn" style="position:fixed;bottom:0;z-index:9025;background-color:#E11;padding:1em;color:#FFF;margin-left:10%;margin-right:10%;display:block;"><p style="color: #FFF;">This documentation is not official. It is built and uploaded automatically. It may document beta software and at times be incomplete or even incorrect. <strong>Use the documents provided here at your own risk.</strong></p> <a href="#" onclick="$('#betawarn').toggle();var d=new Date();d.setTime(d.getTime()+(0.5*24*60*60*1000));document.cookie='betawarn=closed; expires='+d.toUTCString()+'; path=/';" style="color:#FFF;text-decoration:underline;float:left;margin-top:.5em;padding:1em;display:block;background-color:rgba(255,255,255,.3);">Close</a></div><div class="bypass-block"><a href="#_content">Jump to content</a><a href="#_bottom-navigation">Jump to page navigation: previous page [access key p]/next page [access key n]</a></div><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="single-crumb" href="index.html"><span class="single-contents-icon"></span>Release Notes</a><div class="bubble-corner active-contents"></div></div><div class="clearme"></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="single-crumb" href="index.html"><span class="single-contents-icon"></span>Show Contents: Release Notes</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="clearme"></div></div><div class="clearme"></div></div><div class="active-contents bubble"><div class="bubble-container"><div id="_bubble-toc"><ol><li class="inactive"><a href="index.html#sec.intro"><span class="number">1 </span><span class="name">About SUSE Cloud Application Platform</span></a></li><li class="inactive"><a href="index.html#sec.Support"><span class="number">2 </span><span class="name">Support Statement for SUSE Cloud Application Platform</span></a></li><li class="inactive"><a href="index.html#sec.major-change"><span class="number">3 </span><span class="name">Major Changes</span></a></li><li class="inactive"><a href="index.html#sec.caasp"><span class="number">4 </span><span class="name">Deploying SUSE Cloud Application Platform on SUSE Containers as a Service Platform</span></a></li><li class="inactive"><a href="index.html#_installing_suse_cloud_application_platform_on_microsoft_azure"><span class="number">5 </span><span class="name">Installing SUSE Cloud Application Platform on Microsoft Azure</span></a></li><li class="inactive"><a href="index.html#sec.source"><span class="number">6 </span><span class="name">Obtaining Source Code</span></a></li><li class="inactive"><a href="index.html#sec.legal"><span class="number">7 </span><span class="name">Legal Notices</span></a></li><li class="inactive"><a href="index.html#app.secret-sample"><span class="number">8 </span><span class="name">Appendix: Configuration with <code class="literal">secrets:</code> Section</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_toc-bubble-wrap"></div><div id="_content" class="draft "><div class="documentation"><div xml:lang="en" class="article " id="id-1" lang="en"><div class="titlepage"><div><div><h1 class="title">Release Notes</h1></div><div><h3 class="subtitle"><em>SUSE Cloud Application Platform 1.4</em></h3></div><div class="date"><span class="imprint-label">Publication Date: </span>2019-05-15</div></div></div><div class="line"><div class="toc"><dl><dt><span class="section"><a href="index.html#sec.intro"><span class="number">1 </span><span class="name">About SUSE Cloud Application Platform</span></a></span></dt><dt><span class="section"><a href="index.html#sec.Support"><span class="number">2 </span><span class="name">Support Statement for SUSE Cloud Application Platform</span></a></span></dt><dt><span class="section"><a href="index.html#sec.major-change"><span class="number">3 </span><span class="name">Major Changes</span></a></span></dt><dt><span class="section"><a href="index.html#sec.caasp"><span class="number">4 </span><span class="name">Deploying SUSE Cloud Application Platform on SUSE Containers as a Service Platform</span></a></span></dt><dt><span class="section"><a href="index.html#_installing_suse_cloud_application_platform_on_microsoft_azure"><span class="number">5 </span><span class="name">Installing SUSE Cloud Application Platform on Microsoft Azure</span></a></span></dt><dt><span class="section"><a href="index.html#sec.source"><span class="number">6 </span><span class="name">Obtaining Source Code</span></a></span></dt><dt><span class="section"><a href="index.html#sec.legal"><span class="number">7 </span><span class="name">Legal Notices</span></a></span></dt><dt><span class="section"><a href="index.html#app.secret-sample"><span class="number">8 </span><span class="name">Appendix: Configuration with <code class="literal">secrets:</code> Section</span></a></span></dt></dl></div></div><p>This document provides guidance and an overview to high-level general
+features and updates for SUSE Cloud Application Platform 1.4. It also describes capabilities
+and limitations of SUSE Cloud Application Platform 1.4.
+For detailed information about deploying this product, see the
+<span class="emphasis"><em>Deployment Guide</em></span> at <a class="link" href="https://www.suse.com/documentation/cloud-application-platform-1/book_cap_guides/data/part_cap_deployment.html" target="_blank">https://www.suse.com/documentation/cloud-application-platform-1/book_cap_guides/data/part_cap_deployment.html</a>.</p><p>These release notes are updated periodically. The latest version of
+these release notes is always available at <a class="link" href="https://www.suse.com/releasenotes" target="_blank">https://www.suse.com/releasenotes</a>. General documentation
+can be found at <a class="link" href="https://www.suse.com/documentation/cloud-application-platform-1" target="_blank">https://www.suse.com/documentation/cloud-application-platform-1</a>.</p><div class="sect1" id="sec.intro"><div class="titlepage"><div><div><h2 class="title" id="sec.intro"><span class="number">1 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">About SUSE Cloud Application Platform</span> <a title="Permalink" class="permalink" href="index.html#sec.intro">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.intro</li></ul></div></div></div></div><p>SUSE Cloud Application Platform is a modern application delivery platform used to bring an advanced
+cloud native developer experience to Kubernetes—​the de-facto standard for
+enterprise container orchestration. SUSE Cloud Application Platform eliminates manual IT
+configuration and helps accelerate innovation by getting applications to
+market faster. Developers can serve themselves and get apps to the cloud in
+minutes instead of weeks, while staying within IT guidelines, and without
+relying on scarce IT resources to perform manual configuration each step of
+the way. Streamlining application delivery opens a clear path to increased
+business agility, led by enterprise development, operations, and DevOps teams.</p><p>SUSE Cloud Application Platform increases business agility by helping enterprises to:</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>Boost developer productivity with easy one step deployment of cloud native
+applications using the language and framework most appropriate for the task.</p></li><li class="listitem "><p>Reduce complexity and increase IT efficiency with a single, lean, platform
+that brings together proven open source technologies for rapid application
+delivery at scale.</p></li><li class="listitem "><p>Maximize return on investment with industry leading open-source
+technologies that leverage your existing investments.</p></li></ul></div></div><div class="sect1" id="sec.Support"><div class="titlepage"><div><div><h2 class="title" id="sec.Support"><span class="number">2 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Support Statement for SUSE Cloud Application Platform</span> <a title="Permalink" class="permalink" href="index.html#sec.Support">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.Support</li></ul></div></div></div></div><p>To receive support, you need an appropriate subscription with SUSE. For
+more information, see
+<a class="link" href="https://www.suse.com/support/?id=SUSE_Cloud_Application_Platform" target="_blank">https://www.suse.com/support/?id=SUSE_Cloud_Application_Platform</a>.</p><p>The following definitions apply:</p><div class="variablelist "><dl class="variablelist"><dt id="id-1.5.4.1"><span class="term ">L1</span></dt><dd><p>Problem determination, which means technical support designed to provide
+compatibility information, usage support, ongoing maintenance, information
+gathering and basic troubleshooting using available documentation.</p></dd><dt id="id-1.5.4.2"><span class="term ">L2</span></dt><dd><p>Problem isolation, which means technical support designed to analyze
+data, reproduce customer problems, isolate problem area and provide a
+resolution for problems not resolved by Level 1 or prepare for Level 3.</p></dd><dt id="id-1.5.4.3"><span class="term ">L3</span></dt><dd><p>Problem resolution, which means technical support designed to resolve
+problems by engaging engineering to resolve product defects which have been
+identified by Level 2 Support.</p></dd></dl></div><p>For contracted customers and partners, SUSE Cloud Application Platform is delivered with L3 support
+for all packages, except for the following:</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>Technology Previews</p></li><li class="listitem "><p>Sound, graphics, fonts and artwork</p></li><li class="listitem "><p>Packages that require an additional customer contract</p></li></ul></div><p>SUSE will only support the usage of original packages. That is,
+packages that are unchanged and not recompiled.</p></div><div class="sect1" id="sec.major-change"><div class="titlepage"><div><div><h2 class="title" id="sec.major-change"><span class="number">3 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Major Changes</span> <a title="Permalink" class="permalink" href="index.html#sec.major-change">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.major-change</li></ul></div></div></div></div><div class="sect2" id="sec.1_4"><div class="titlepage"><div><div><h3 class="title" id="sec.1_4"><span class="number">3.1 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Release 1.4, May 2019</span> <a title="Permalink" class="permalink" href="index.html#sec.1_4">#</a></h3><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.1_4</li></ul></div></div></div></div><div class="sect3" id="sec.1_4.new"><div class="titlepage"><div><div><h4 class="title" id="sec.1_4.new"><span class="number">3.1.1 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">What Is New?</span> <a title="Permalink" class="permalink" href="index.html#sec.1_4.new">#</a></h4><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.1_4.new</li></ul></div></div></div></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>SUSE Cloud Foundry has been updated to version 2.16.4:</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>A tech preview of Eirini is available.</p></li><li class="listitem "><p>Added SLE15 stack.</p></li><li class="listitem "><p>Added feature flags to enable roles such as autoscaler, cf-usb, credhub and eirini.</p></li><li class="listitem "><p>Added Sync Integration Test Suite (SITS).</p></li><li class="listitem "><p>Added support for NGINX Ingress Controller with customizable Ingress via user suppplied annotations.</p></li><li class="listitem "><p>Added .net-core buildpack (2.2.7).</p></li></ul></div></li><li class="listitem "><p>The Stratos UI has been updated to version 2.4:</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>For a full list of features and fixes see <a class="link" href="https://github.com/SUSE/stratos/releases/tag/2.4.0" target="_blank">https://github.com/SUSE/stratos/releases/tag/2.4.0</a>.</p></li></ul></div></li></ul></div><p>For information about deploying and administering SUSE Cloud Application Platform, see the product manuals at
+<a class="link" href="https://www.suse.com/documentation/cloud-application-platform-1" target="_blank">https://www.suse.com/documentation/cloud-application-platform-1</a>.</p></div><div class="sect3" id="sec.1_4.feature"><div class="titlepage"><div><div><h4 class="title" id="sec.1_4.feature"><span class="number">3.1.2 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Features and Fixes</span> <a title="Permalink" class="permalink" href="index.html#sec.1_4.feature">#</a></h4><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.1_4.feature</li></ul></div></div></div></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>cf-mysql-release has been pinned at version 36.15.0 to avoid intermittent database connectivity errors in HA setup.</p></li><li class="listitem "><p>Changed app autoscaler-postgres to a non-HA setup due to a known limitation - see <a class="link" href="https://github.com/cloudfoundry/postgres-release/#known-limitations" target="_blank">https://github.com/cloudfoundry/postgres-release/#known-limitations</a>.</p></li><li class="listitem "><p>The app autoscaler services are no longer deployed as Kubernetes services of type LoadBalancer and therefore, are not exposed on public IP addresses or hostnames.</p></li><li class="listitem "><p>Fixed autoscaler to perform SSL validation.</p></li><li class="listitem "><p>Fixed autoscaler to listen to cluster internal CF API endpoint.</p></li><li class="listitem "><p>The default <code class="literal">nproc</code> limits for the vcap user for all SCF roles have been bumped to 1024/2048 (soft/hard). You can use different limits by setting <code class="literal">kube.limits.nproc.soft</code> and <code class="literal">kube.limits.nproc.hard</code> in the Helm chart values.</p></li><li class="listitem "><p>Cleaned up role readiness probe outputs.</p></li><li class="listitem "><p>Fixed the test for an insecure Docker registry (uses tcpdomain for the route).</p></li><li class="listitem "><p>Includes these Cloud Foundry component versions:</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>app-autoscaler: 1.0.0</p></li><li class="listitem "><p>bits-service: 2.26.0</p></li><li class="listitem "><p>bpm: 1.0.0</p></li><li class="listitem "><p>capi: 1.79.0</p></li><li class="listitem "><p>cf-deployment: 6.10</p></li><li class="listitem "><p>cf-mysql: 36.15.0</p></li><li class="listitem "><p>cf-routing: 0.184.0</p></li><li class="listitem "><p>cf-sle12: 1.75.11</p></li><li class="listitem "><p>cf-smoke-tests: 40.0.44</p></li><li class="listitem "><p>cf-syslog-drain: 8.1</p></li><li class="listitem "><p>cf-usb: 1.0.1</p></li><li class="listitem "><p>cflinuxfs2: 1.281.0</p></li><li class="listitem "><p>cflinuxfs3: 0.81.0</p></li><li class="listitem "><p>credhub: 2.1.2</p></li><li class="listitem "><p>diego: 2.25.0</p></li><li class="listitem "><p>eirini: 0.0.4</p></li><li class="listitem "><p>garden-runc: 1.17.2</p></li><li class="listitem "><p>groot-btrfs: 1.0.4</p></li><li class="listitem "><p>kubectl: 1.9.6</p></li><li class="listitem "><p>loggregator: 104.4</p></li><li class="listitem "><p>loggregator-agent: 3.2</p></li><li class="listitem "><p>nats: 26</p></li><li class="listitem "><p>nfs-volume: 1.7.6</p></li><li class="listitem "><p>postgres-release: 26</p></li><li class="listitem "><p>scf-helper: 1.0.2</p></li><li class="listitem "><p>cf-acceptance-tests:</p></li><li class="listitem "><p>statsd-injector: 1.5.0</p></li><li class="listitem "><p>uaa: 68.0</p></li></ul></div></li><li class="listitem "><p>Buildpacks:</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>binary-buildpack: 1.0.32</p></li><li class="listitem "><p>dotnet-core-buildpack: 2.2.10</p></li><li class="listitem "><p>go-buildpack: 1.8.36</p></li><li class="listitem "><p>java-buildpack: 4.19.1</p></li><li class="listitem "><p>nginx-buildpack: 1.0.11</p></li><li class="listitem "><p>nodejs-buildpack: 1.6.49</p></li><li class="listitem "><p>php-buildpack: 4.3.75</p></li><li class="listitem "><p>python-buildpack: 1.6.32</p></li><li class="listitem "><p>ruby-buildpack: 1.7.38</p></li><li class="listitem "><p>staticfile-buildpack: 1.4.42</p></li></ul></div></li></ul></div></div><div class="sect3" id="sec.1_4.issue"><div class="titlepage"><div><div><h4 class="title" id="sec.1_4.issue"><span class="number">3.1.3 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Known Issues</span> <a title="Permalink" class="permalink" href="index.html#sec.1_4.issue">#</a></h4><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.1_4.issue</li></ul></div></div></div></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>The instructions for enabling Eirini can be found at <a class="link" href="https://github.com/SUSE/scf/wiki/Eirini" target="_blank">https://github.com/SUSE/scf/wiki/Eirini</a>.</p></li><li class="listitem "><p>Resuming a past practice, with SUSE Cloud Application Platform 1.4, use the complete command: <code class="literal">helm upgrade --force --recreate-pods</code> for an upgrade. This will reintroduce downtime for apps but without <code class="literal">--recreate-pods</code>, multiple versions of statefulsets may co-exist which can cause incompatibilities between depedent statefulsets, and result in a broken upgrade. This applies to Stratos pods as well.</p></li><li class="listitem "><p>With the introduction of feature flags, setting <code class="literal">sizing.&lt;role&gt;.count</code> to enable/disable a feature is no longer supported. You must explicitly set <code class="literal">enable.&lt;feature&gt;</code> to <code class="literal">true</code> or <code class="literal">false</code> to enable/disable a feature. As an example, if you had enabled credhub or autoscaler in SUSE Cloud Application Platform 1.3.1, then you must add <code class="literal">enable.credhub=true</code> or <code class="literal">enable.autoscaler=true</code> during the <code class="literal">helm upgrade</code>. If you had previously set <code class="literal">sizing.&lt;role&gt;.count</code> to <code class="literal">1</code> you can remove that as the new minimum setting is <code class="literal">1</code>. Conversely, if you had disabled a feature in SUSE Cloud Application Platform 1.3.1, you should remove the corresponding sizing setting and, instead, explicitly set <code class="literal">enable.&lt;feature&gt;=false</code> during the upgrade. If you would like to deploy more than <code class="literal">1</code> instance of an optional role, you would need to use an appropriate value for <code class="literal">sizing.&lt;role&gt;.count</code> in addition to using the feature flag.</p></li><li class="listitem "><p>If autoscaler was enabled in SUSE Cloud Application Platform 1.3.1, you must specify <code class="literal">sizing.autoscaler_postgres.disk_sizes.postgres_data=100</code> during the helm upgrade to avoid upgrade errors. Alternatively, you can disable the autoscaler before the upgrade and re-enable after the upgrade is finished. Without any of these workarounds, the upgrade would fail with <code class="literal">Error: UPGRADE FAILED: StatefulSet.apps "autoscaler-postgres" is invalid</code> message.</p></li><li class="listitem "><p>If you are using the NGINX Ingress Controller and seeing <code class="literal">Request Entity Too Large</code> errors, you should bump up the ingress proxy body size to an appropriate value by setting the <code class="literal">ingress.annotations</code> key in helm chart values as in the following:</p></li></ul></div><div class="verbatim-wrap"><pre class="screen">  ingress:
+     annotations:
+       nginx.ingress.kubernetes.io/proxy-body-size: 64m</pre></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>If during an upgrade the <code class="literal">post-deployment</code> job does not complete, re-apply the <code class="literal">helm upgrade</code>.</p></li><li class="listitem "><p>On GKE, the swap accounting related kernel boot parameter changes on the worker nodes may not be retained as GCP may automatically re-provision nodes to perform upgrades or repairs. One option you may want to consider is to set up the GKE cluster with <code class="literal">auto-repair</code> and <code class="literal">auto-upgrade</code> set to <code class="literal">false</code> to reduce the ephemeral nature of the GKE nodes. See <a class="link" href="https://cloud.google.com/kubernetes-engine/docs/concepts/node-images#modifications" target="_blank">https://cloud.google.com/kubernetes-engine/docs/concepts/node-images#modifications</a> for more details.</p></li><li class="listitem "><p>On GKE you should set up the Kubernetes storage class to be backed by an SSD instead of a standard disk.</p></li></ul></div></div></div><div class="sect2" id="sec.1_3_1"><div class="titlepage"><div><div><h3 class="title" id="sec.1_3_1"><span class="number">3.2 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Release 1.3.1, February 2019</span> <a title="Permalink" class="permalink" href="index.html#sec.1_3_1">#</a></h3><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.1_3_1</li></ul></div></div></div></div><div class="sect3" id="sec.1_3_1.new"><div class="titlepage"><div><div><h4 class="title" id="sec.1_3_1.new"><span class="number">3.2.1 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">What Is New?</span> <a title="Permalink" class="permalink" href="index.html#sec.1_3_1.new">#</a></h4><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.1_3_1.new</li></ul></div></div></div></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>SUSE Cloud Foundry has been updated to version 2.15.2:</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>Default PodSecurityPolicies (PSPs) come with the helm charts</p></li><li class="listitem "><p>cflinuxfs3 now available as a stack</p></li><li class="listitem "><p>Added nginx buildpack</p></li><li class="listitem "><p>Support added for placement zones &amp; isolation segments</p></li></ul></div></li><li class="listitem "><p>The Stratos UI has been updated to version 2.3:</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>Support for extensions</p></li><li class="listitem "><p>For a full list of features and fixes see <a class="link" href="https://github.com/SUSE/stratos/releases/tag/2.3.0" target="_blank">https://github.com/SUSE/stratos/releases/tag/2.3.0</a>.</p></li></ul></div></li></ul></div><p>For information about deploying and administering SUSE Cloud Application Platform, see the product manuals at
+<a class="link" href="https://www.suse.com/documentation/cloud-application-platform-1" target="_blank">https://www.suse.com/documentation/cloud-application-platform-1</a>.</p></div><div class="sect3" id="sec.1_3_1.feature"><div class="titlepage"><div><div><h4 class="title" id="sec.1_3_1.feature"><span class="number">3.2.2 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Features and Fixes</span> <a title="Permalink" class="permalink" href="index.html#sec.1_3_1.feature">#</a></h4><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.1_3_1.feature</li></ul></div></div></div></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>App-AutoScaler no longer depends on hairpin</p></li><li class="listitem "><p>CredHub on Microsoft Azure is now supported</p></li><li class="listitem "><p>Corrected service name to work with <code class="literal">syslog</code> drains</p></li><li class="listitem "><p>Certificates rely on correct FQDN for UAA</p></li><li class="listitem "><p>Removed obsolete key and diego-cell readiness probe from <code class="literal">role-manifest.yml</code></p></li><li class="listitem "><p>Changed one variable name to align with upstream practices—​this may require changes to sizing:</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p><code class="literal">cf-routing</code> replaces <code class="literal">routing</code></p></li></ul></div></li><li class="listitem "><p>Includes these Cloud Foundry component versions:</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>app-autoscaler: 1.0.0</p></li><li class="listitem "><p>bpm: 1.0.0</p></li><li class="listitem "><p>capi: 1.66.0</p></li><li class="listitem "><p>cf-deployment: 3.6.0</p></li><li class="listitem "><p>cf-mysql: 36.15.0</p></li><li class="listitem "><p>cf-routing: 0.180.0</p></li><li class="listitem "><p>cf-sle12: 1.52.6</p></li><li class="listitem "><p>cf-smoke-tests: 40.0.6</p></li><li class="listitem "><p>cf-syslog-drain: 7.0</p></li><li class="listitem "><p>cf-usb: 1.0.1</p></li><li class="listitem "><p>cflinuxfs2: 1.266.0</p></li><li class="listitem "><p>cflinuxfs3: 0.60.0</p></li><li class="listitem "><p>credhub: 2.0.2</p></li><li class="listitem "><p>diego: 2.16.0</p></li><li class="listitem "><p>garden-runc: 1.16.3</p></li><li class="listitem "><p>groot-btrfs: 1.0.4</p></li><li class="listitem "><p>kubectl: 1.9.6</p></li><li class="listitem "><p>loggregator: 103.1</p></li><li class="listitem "><p>loggregator-agent: 2.0</p></li><li class="listitem "><p>nats: 25</p></li><li class="listitem "><p>nfs-volume: 1.2.0</p></li><li class="listitem "><p>opensuse42: 1.8.6</p></li><li class="listitem "><p>postgres-release: 26</p></li><li class="listitem "><p>scf-helper: 1.0.1</p></li><li class="listitem "><p>cf-acceptance-tests: 2.8</p></li><li class="listitem "><p>statsd-injector: 1.3.0</p></li><li class="listitem "><p>uaa: 60.2</p></li><li class="listitem "><p>uaa-fissile: c9edf895</p></li></ul></div></li><li class="listitem "><p>Buildpacks:</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>binary-buildpack: 1.0.30</p></li><li class="listitem "><p>dotnet-core-buildpack: 2.0.3</p></li><li class="listitem "><p>go-buildpack: 1.8.33</p></li><li class="listitem "><p>java-buildpack: 4.17.2</p></li><li class="listitem "><p>nginx-buildpack: 1.0.8</p></li><li class="listitem "><p>nodejs-buildpack: 1.6.43</p></li><li class="listitem "><p>php-buildpack: 4.3.70</p></li><li class="listitem "><p>python-buildpack: 1.6.27</p></li><li class="listitem "><p>ruby-buildpack: 1.7.31</p></li><li class="listitem "><p>staticfile-buildpack: 1.4.39</p></li></ul></div></li></ul></div></div><div class="sect3" id="sec.1_3_1.issue"><div class="titlepage"><div><div><h4 class="title" id="sec.1_3_1.issue"><span class="number">3.2.3 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Known Issues</span> <a title="Permalink" class="permalink" href="index.html#sec.1_3_1.issue">#</a></h4><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.1_3_1.issue</li></ul></div></div></div></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>For SUSE Cloud Application Platform 1.3.1, during the helm upgrade from 1.3.0, the <code class="literal">--recreate-pods</code> is not required as the recent change to the active/passive model allowed for previously Unready pods to be upgraded. This will allow for zero app downtime from the previous version.</p></li><li class="listitem "><p>For deployments on Amazon EKS: the AWS Service Broker (<a class="link" href="https://aws.amazon.com/partners/servicebroker/" target="_blank">https://aws.amazon.com/partners/servicebroker/</a>) should now be used instead of the deprecated <code class="literal">cf-brokers</code> wrapper.</p></li><li class="listitem "><p>For custom PSPs, <code class="literal">SYS_RESOURCE</code> no longer needs to be specified under added capabilities in the <code class="literal">scf-config-values.yml</code></p></li><li class="listitem "><p>During an upgrade from 2.14 to 2.15.2, the GoRouter and the applications it routes to will be unavailable until the new GoRouter pods are ready. You can work around this by setting the following label on the existing GoRouter pod specs:
+labels:</p><div class="verbatim-wrap"><pre class="screen">labels:
+.. `app.kubernetes.io/component: "router"`
+.. `skiff-role-name: "router"`</pre></div></li><li class="listitem "><p>The App-AutoScaler services are exposed as Kube services of type LoadBalancer but they should only be accessed via the GoRouter. Therefore, do not rely on the public IPs for these services on the load balancer or do not create separate DNS entries for them — use the DNS entries associated with the GoRouter public service instead.</p></li><li class="listitem "><p>Deletion of MariaDB instances created with Minibroker can fail with timeouts. If an error appears, wait one minute and retry. If the <code class="literal">cf delete-service</code> command fails but the instance pods are removed from Kubernetes, the service instance data can safely be removed with a <code class="literal">cf purge-service-instance</code> command.</p></li><li class="listitem "><p>On Microsoft Azure it is recommended to run on instance types <code class="literal">Standard_DS4_v2</code> or larger due to the introduction of the cflinuxfs3 stack. It’s also recommended to use Premium SSD for the storage class.</p></li><li class="listitem "><p>If you notice application instances (long-running processes or "LRPs") improperly persisting and accepting traffic after update or scaling actions, there may be an instance of the cc-clock role that did not come up properly due to an incorrect internal protocol setting. To address this:</p></li></ul></div><div class="orderedlist "><ol class="orderedlist" type="1"><li class="listitem "><p>Create a file called <code class="literal">cc-clock-patch.yml</code> with the following contents:</p><div class="verbatim-wrap highlight bash"><pre class="programlisting">bosh:
+   instance_groups:
+   - name: cc-clock
+     jobs:
+     - name: cloud_controller_clock
+       properties:
+         cc:
+           external_protocol: http</pre></div></li><li class="listitem "><p>Rerun the upgrade of the CAP deployment via a Helm command with this syntax: <code class="literal">helm upgrade scf suse/cf --reuse-values --namespace scf -f cc-clock-patch-yml</code></p></li><li class="listitem "><p>For high-availability (HA) deployments, manually restart the cc-clock-N pods by deleting them one at a time to avoid app downtime; newer updated pods will be created automatically:</p><div class="verbatim-wrap highlight bash"><pre class="programlisting">kubectl delete pod - n scf cc-clock-0
+kubectl delete pod - n scf cc-clock-1
+kubectl delete pod - n scf cc-clock-2</pre></div></li><li class="listitem "><p>For single availability deployments, since there’s only one cc-clock pod, app downtime is unavoidable.</p></li></ol></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>The URL of the internal <code class="literal">cf-usb</code> broker endpoint has been corrected from the duplicate name from the previous version. To reconnect with SUSE Cloud Foundry/SUSE Cloud Application Platform, brokers for PostgreSQL and MySQL that use <code class="literal">cf-usb</code> will require the following manual fix after the upgrade:</p></li></ul></div><div class="orderedlist "><ol class="orderedlist" type="1"><li class="listitem "><p>Run <code class="literal">kubectl get secret --namespace scf</code> and copy the name of the secret (for example, <code class="literal">secrets-2.15.2-1</code>)</p></li><li class="listitem "><p>Run <code class="literal">cf service-brokers</code> to get the URL for the <code class="literal">cf-usb</code> host (for example, <code class="literal"><a class="link" href="https://cf-usb-cf-usb.scf.svc.cluster.local:24054" target="_blank">https://cf-usb-cf-usb.scf.svc.cluster.local:24054</a></code>)</p></li><li class="listitem "><p>Get the current <code class="literal">CF_USB</code> password by running:</p><div class="verbatim-wrap highlight bash"><pre class="programlisting">kubectl get secret --namespace scf &lt;SECRET_NAME&gt; -o yaml | \
+  grep \\scf-usb-password: | cut -d: -f2 | base64 -id</pre></div><p>Replace <code class="literal">&lt;SECRET_NAME&gt;</code> with the name from the first step.</p></li><li class="listitem "><p>Finally, update the service broker:</p><div class="verbatim-wrap highlight bash"><pre class="programlisting">cf update-service-broker usb broker-admin &lt;PASSWORD&gt; \
+  https://cf-usb.scf.svc.cluster.local:24054</pre></div><p>Replace <code class="literal">&lt;PASSWORD&gt;</code> with the password from step 3. The URL is a modified
+version of the URL from step 2: however, as the subdomain name, use
+<code class="literal">cf-usb</code> instead of <code class="literal">cf-usb-cf-usb</code>.</p></li></ol></div></div></div><div class="sect2" id="sec.1_3"><div class="titlepage"><div><div><h3 class="title" id="sec.1_3"><span class="number">3.3 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Release 1.3, November 2018</span> <a title="Permalink" class="permalink" href="index.html#sec.1_3">#</a></h3><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.1_3</li></ul></div></div></div></div><div class="sect3" id="sec.1_3.new"><div class="titlepage"><div><div><h4 class="title" id="sec.1_3.new"><span class="number">3.3.1 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">What Is New?</span> <a title="Permalink" class="permalink" href="index.html#sec.1_3.new">#</a></h4><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.1_3.new</li></ul></div></div></div></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>SUSE Cloud Foundry has been updated to version 2.14.5:</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>Includes support for AWS Service Broker</p></li><li class="listitem "><p>Centralized credential management with CredHub is now available to Cloud Foundry apps and compatible brokers (disabled by default)</p></li><li class="listitem "><p>Automatically scaling resource with App-AutoScaler is now supported for Azure Kubernetes Service and Amazon Elastic Container Service for Kubernetes (disabled by default)</p></li><li class="listitem "><p>Minibroker has gained support for Redis, MongoDB, MySQL, PostgreSQL, and MariaDB</p></li></ul></div></li><li class="listitem "><p>The Stratos UI has been updated to version 2.2:</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>There is a new metrics endpoint for keeping and exposing Cloud Foundry application and Kubernetes metrics</p></li><li class="listitem "><p>There are new views for Kubernetes application, pod, and node metrics</p></li><li class="listitem "><p>For a more detailed list of new features and fixes, see <a class="link" href="https://github.com/SUSE/stratos/releases/tag/2.2.0" target="_blank">https://github.com/SUSE/stratos/releases/tag/2.2.0</a>.</p></li></ul></div></li></ul></div><p>For information about deploying and administering SUSE Cloud Application Platform, see the product manuals at
+<a class="link" href="https://www.suse.com/documentation/cloud-application-platform-1" target="_blank">https://www.suse.com/documentation/cloud-application-platform-1</a>.</p></div><div class="sect3" id="sec.1_3.feature"><div class="titlepage"><div><div><h4 class="title" id="sec.1_3.feature"><span class="number">3.3.2 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Features and Fixes</span> <a title="Permalink" class="permalink" href="index.html#sec.1_3.feature">#</a></h4><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.1_3.feature</li></ul></div></div></div></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>One Kubernetes service per job. The service names will include both the instance group (previously the role) and job name, which impacts the role manifest YAML</p></li><li class="listitem "><p>Changed two variable names to align with upstream practices—​this may require changes to sizing:</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p><code class="literal">diego-ssh</code> replaces <code class="literal">diego-access</code></p></li><li class="listitem "><p><code class="literal">api-group</code> replaces <code class="literal">api</code></p></li></ul></div></li><li class="listitem "><p>UAA charts now have affinity/antiaffinity logic</p></li><li class="listitem "><p>Exposed SMTP_HOST &amp; SMTP_FROM_ADDRESS variables to allow for account creation &amp; password reset</p></li><li class="listitem "><p><code class="literal">consul</code> role removed due to redundancy</p></li><li class="listitem "><p>Kubernetes readiness check no longer looks for <code class="literal">hyperkube</code> explicitly</p></li><li class="listitem "><p>Updated cluster role names to ensure no namespace conflicts in Kubernetes</p></li><li class="listitem "><p>Includes these Cloud Foundry component versions:</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>UAA: v60.2</p></li><li class="listitem "><p>cf-deployment: 2.7.0</p></li><li class="listitem "><p>kubectl: 1.9.6</p></li><li class="listitem "><p>capi-release: 1.61.0</p></li><li class="listitem "><p>cflinuxfs2-release: v1.227.0</p></li><li class="listitem "><p>cf-mysql-release: v36.15.0</p></li><li class="listitem "><p>cf-opensuse42-release: 1.7.87</p></li><li class="listitem "><p>cf-sle12-release: 1.51.115</p></li><li class="listitem "><p>cf-smoke-tests-release: 40.0.5</p></li><li class="listitem "><p>cf-syslog-drain-release: v7.0</p></li><li class="listitem "><p>cf-usb: 7a45076</p></li><li class="listitem "><p>diego-release: v2.12.1</p></li><li class="listitem "><p>garden-runc-release: v1.15.1</p></li><li class="listitem "><p>groot-btrfs: 305b068d</p></li><li class="listitem "><p>loggregator-agent-release: v2.0</p></li><li class="listitem "><p>loggregator-release: v103.0</p></li><li class="listitem "><p>nats-release: v24</p></li><li class="listitem "><p>nfs-volume-release: v1.2.0</p></li><li class="listitem "><p>postgres-release: v26</p></li><li class="listitem "><p>routing-release: 0.179.0</p></li><li class="listitem "><p>scf-helper-release: b9fa59d</p></li><li class="listitem "><p>cf-acceptance-tests: c83c97b9</p></li><li class="listitem "><p>testbrain: 1.0.0-61-ga172cf9</p></li><li class="listitem "><p>statsd-injector-release: v1.3.0</p></li><li class="listitem "><p>uaa-fissile-release: 0.0.1-321-g6c32268</p></li></ul></div></li><li class="listitem "><p>Buildpacks:</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>binary-buildpack-release: 1.0.27.1</p></li><li class="listitem "><p>dotnet-core-buildpack-release: 1.0.26-14-gf951834</p></li><li class="listitem "><p>go-buildpack-release: 1.8.28.1</p></li><li class="listitem "><p>java-buildpack-release: 4.16.1-3-g3cf9321</p></li><li class="listitem "><p>nodejs-buildpack-release: 1.6.34.1</p></li><li class="listitem "><p>php-buildpack-release: 4.3.63.1</p></li><li class="listitem "><p>python-buildpack-release: 1.6.23.1</p></li><li class="listitem "><p>ruby-buildpack-release: 1.7.26.1</p></li><li class="listitem "><p>staticfile-buildpack-release: 1.4.34.1</p></li></ul></div></li></ul></div></div><div class="sect3" id="sec.1_3.issue"><div class="titlepage"><div><div><h4 class="title" id="sec.1_3.issue"><span class="number">3.3.3 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Known Issues</span> <a title="Permalink" class="permalink" href="index.html#sec.1_3.issue">#</a></h4><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.1_3.issue</li></ul></div></div></div></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>App-AutoScaler will not work on SUSE Containers as a Service Platform without Hairpin enabled.</p></li><li class="listitem "><p>Enabling new feature roles, such as CredHub and App-AutoScaler, requires more memory and CPU resources in minimal installations (at least 22 GB in total for single instances that have all roles enabled). If these new feature pods are enabled, for example, on Microsoft Azure instances, move to the tier <span class="emphasis"><em>Standard_D4_v2</em></span> or larger.</p></li><li class="listitem "><p>CredHub on Microsoft Azure is considered experimental.</p></li><li class="listitem "><p>Minibroker with MariaDB will see timeout issues upon deletion. If an error appears, wait one minute and retry. If the <code class="literal">cf delete-service</code> command fails but the instance pods are removed from Kubernetes, the service instance data can safely be removed with a <code class="literal">cf purge-service-instance</code> command.</p></li><li class="listitem "><p>The AWS Service Broker has changed with the recent release of v1.0. The Helm chart from SUSE will be updated in the near future to include these changes.</p></li><li class="listitem "><p>The URL of the internal <code class="literal">cf-usb</code> broker endpoint has changed. To reconnect with SUSE Cloud Foundry/SUSE Cloud Application Platform, brokers for PostgreSQL and MySQL that use <code class="literal">cf-usb</code> will require the following manual fix after the upgrade:</p><div class="orderedlist "><ol class="orderedlist" type="1"><li class="listitem "><p>Run <code class="literal">kubectl get secret --namespace scf</code> and copy the name of the secret (for example, <code class="literal">secrets-2.14.5-1</code>)</p></li><li class="listitem "><p>Run <code class="literal">cf service-brokers</code> to get the URL for the <code class="literal">cf-usb</code> host (for example, <code class="literal"><a class="link" href="https://cf-usb.scf.svc.cluster.local:24054" target="_blank">https://cf-usb.scf.svc.cluster.local:24054</a></code>)</p></li><li class="listitem "><p>Get the current <code class="literal">CF_USB</code> password by running:</p><div class="verbatim-wrap highlight bash"><pre class="programlisting">kubectl get secret --namespace scf &lt;SECRET_NAME&gt; -o yaml | \
+  grep \\scf-usb-password: | cut -d: -f2 | base64 -id</pre></div><p>Replace <code class="literal">&lt;SECRET_NAME&gt;</code> with the name from the first step.</p></li><li class="listitem "><p>Finally, update the service broker:</p><div class="verbatim-wrap highlight bash"><pre class="programlisting">cf update-service-broker usb broker-admin &lt;PASSWORD&gt; \
+  https://cf-usb-cf-usb.scf.svc.cluster.local:24054</pre></div><p>Replace <code class="literal">&lt;PASSWORD&gt;</code> with the password from step 3. The URL is a modified
+version of the URL from step 2: however, as the subdomain name, use
+<code class="literal">cf-usb-cf-usb</code> instead of <code class="literal">cf-usb</code>.</p></li></ol></div></li></ul></div></div></div><div class="sect2" id="sec.1_2_1"><div class="titlepage"><div><div><h3 class="title" id="sec.1_2_1"><span class="number">3.4 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Release 1.2.1, September 2018</span> <a title="Permalink" class="permalink" href="index.html#sec.1_2_1">#</a></h3><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.1_2_1</li></ul></div></div></div></div><div class="sect3" id="sec.1_2_1.feature"><div class="titlepage"><div><div><h4 class="title" id="sec.1_2_1.feature"><span class="number">3.4.1 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Features and Fixes</span> <a title="Permalink" class="permalink" href="index.html#sec.1_2_1.feature">#</a></h4><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.1_2_1.feature</li></ul></div></div></div></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>Updated Stratos UI to v2.1</p></li><li class="listitem "><p>Updated SUSE Cloud Foundry to v2.13.3</p></li><li class="listitem "><p>Introduction of App-AutoScaler (experimental, off by default)</p></li><li class="listitem "><p>Introduction of Minibroker for Redis (experimental)</p></li><li class="listitem "><p>Support for Microsoft Azure service brokers</p></li><li class="listitem "><p>Cloud Foundry deployment bumped to 2.7.0</p></li><li class="listitem "><p><code class="literal">Groot-btrfs</code> now available</p></li><li class="listitem "><p>HA for <code class="literal">nfs-broker</code>, <code class="literal">cc-clock</code> and <code class="literal">syslog-scheduler</code> roles</p></li><li class="listitem "><p>Enabled cloud controller security events</p></li><li class="listitem "><p>Exposed <code class="literal">broker_client_timeout_seconds</code> as a router parameter</p></li><li class="listitem "><p>Realigned Cloud Foundry role composition to be more in line with upstream, which includes these changes:</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p><code class="literal">mysql-proxy</code> has been merged into the <code class="literal">mysql</code> role</p></li><li class="listitem "><p><code class="literal">diego-locket</code> has been merged into <code class="literal">diego-api</code></p></li><li class="listitem "><p><code class="literal">log-api</code> roles now combines <code class="literal">loggregator</code> and <code class="literal">syslog-rlp</code></p></li><li class="listitem "><p><code class="literal">syslog-adapter</code> renamed as <code class="literal">adapter</code></p></li></ul></div></li><li class="listitem "><p>Removed process list from all roles</p></li><li class="listitem "><p>Removed duplicate <code class="literal">routing_api.locket.api_location</code> property</p></li><li class="listitem "><p><code class="literal">syslog-adapter</code> added to syslog adapter certificate</p></li><li class="listitem "><p><code class="literal">INTERNAL_CA_KEY</code> not included in every pod by default</p></li><li class="listitem "><p>Better mechanism for waiting on <code class="literal">mysql</code> included</p></li><li class="listitem "><p>Includes these Cloud Foundry component versions:</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>UAA: v60.2</p></li><li class="listitem "><p>cf-deployment: 2.7.0</p></li><li class="listitem "><p>ruby-buildpack: 1.7.21.1</p></li><li class="listitem "><p>go-buildpack: 1.8.22.1</p></li><li class="listitem "><p>kubectl: 1.9.6</p></li><li class="listitem "><p>capi-release: 1.61.0</p></li><li class="listitem "><p>cflinuxfs2-release: v1.227.0</p></li><li class="listitem "><p>cf-mysql-release: v36.15.0</p></li><li class="listitem "><p>cf-opensuse42-release: 648e8f1</p></li><li class="listitem "><p>cf-sle12-release: c585efc</p></li><li class="listitem "><p>cf-smoke-tests-release: 40.0.5</p></li><li class="listitem "><p>cf-syslog-drain-release: v7.0</p></li><li class="listitem "><p>cf-usb: 7a45076</p></li><li class="listitem "><p>consul-release: v195</p></li><li class="listitem "><p>diego-release: v2.12.1</p></li><li class="listitem "><p>garden-runc-release:  v1.15.1</p></li><li class="listitem "><p>loggregator-release: v103.0</p></li><li class="listitem "><p>nats-release: v24</p></li><li class="listitem "><p>nfs-volume-release: v1.2.0</p></li><li class="listitem "><p>postgres-release: v26</p></li><li class="listitem "><p>routing-release: 0.179.0</p></li><li class="listitem "><p>scf-helper-release: b276460</p></li><li class="listitem "><p>cf-acceptance-tests: c83c97b9</p></li><li class="listitem "><p>testbrain: 1.0.0-61-ga172cf9</p></li><li class="listitem "><p>statsd-injector-release: v1.3.0</p></li><li class="listitem "><p>uaa-fissile-release: 0.0.1-299-gdd37ec6</p></li></ul></div></li><li class="listitem "><p>Buildpacks:</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>binary-buildpack-release: 1.0.17</p></li><li class="listitem "><p>dotnet-core-buildpack-release: 1.0.26-14-gf951834</p></li><li class="listitem "><p>go-buildpack-release: 1.7.19-21-g0897183</p></li><li class="listitem "><p>java-buildpack-release: 3.16-18-gfeab2b6</p></li><li class="listitem "><p>nodejs-buildpack-release: 1.5.30-13-g584d686</p></li><li class="listitem "><p>php-buildpack-release: 3dc85f9</p></li><li class="listitem "><p>python-buildpack-release: 1.5.16-14-ga2bbb4c</p></li><li class="listitem "><p>ruby-buildpack-release: bd1f612</p></li><li class="listitem "><p>staticfile-buildpack-release: 1.4.0-12-gdfc6c09</p></li></ul></div></li></ul></div></div><div class="sect3" id="sec.1_2_1.issue"><div class="titlepage"><div><div><h4 class="title" id="sec.1_2_1.issue"><span class="number">3.4.2 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Known Issues</span> <a title="Permalink" class="permalink" href="index.html#sec.1_2_1.issue">#</a></h4><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.1_2_1.issue</li></ul></div></div></div></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>Starting with SUSE Cloud Application Platform 1.2.1, during helm upgrade, Kubernetes will not upgrade pods that are not ready by default. To upgrade all pods, use the complete command: <code class="literal">helm upgrade --force --recreate-pods</code></p></li><li class="listitem "><p>Similar to SUSE CaaS Platform 3, Microsoft Azure now mandates a stricter security policy via PodSecurityPolicy (PSP), which is included as part of the SUSE Cloud Application Platform Deployment Guide. Any namespace tied to SUSE Cloud Application Platform requires privileged ports to be accessible needs to have to have a PSP set appropriately for access. This would include the default conventions of <code class="literal">scf</code>, <code class="literal">uaa</code>, <code class="literal">stratos-ui</code>, <code class="literal">mysql-sidecar</code> and <code class="literal">postgres-sidecar</code> as per our documentation tied to SUSE CaaS Platform 3: <a class="link" href="https://www.suse.com/documentation/cloud-application-platform-1/book_cap_guides/data/sec_cap_prereqs-prod.html#sec_cap_caasp-3" target="_blank">https://www.suse.com/documentation/cloud-application-platform-1/book_cap_guides/data/sec_cap_prereqs-prod.html#sec_cap_caasp-3</a></p></li><li class="listitem "><p>Microsoft Azure users who previously had a Kubernetes policy without RBAC, but now have Azure Kubernetes Service (AKS) with RBAC (which is the new default with AKS), will need to modify their <code class="literal">scf-config-values.yaml</code> files so that <code class="literal">auth: rbac</code> replaces <code class="literal">auth: none</code>. If you remain in an AKS policy without RBAC, then you can ignore this change.</p></li><li class="listitem "><p>If you are using Microsoft Azure, ensure that the root partition has enough space for the installation and potential upgrades. To do so, add the parameter <code class="literal">--node-osdisk-size=60</code> to the command that creates the AKS instance: <code class="literal">az aks create</code>. For the complete command, see the <span class="emphasis"><em>SUSE Cloud Application Platform Deployment Guide</em></span>, section <span class="emphasis"><em>AKS</em></span>, subsection <span class="emphasis"><em>Create Resource Group and AKS Instance</em></span> (<a class="link" href="https://www.suse.com/documentation/cloud-application-platform-1/book_cap_guides/data/sec_cap_create-aks-instance.html" target="_blank">https://www.suse.com/documentation/cloud-application-platform-1/book_cap_guides/data/sec_cap_create-aks-instance.html</a>).</p></li></ul></div></div></div><div class="sect2" id="sec.1_2"><div class="titlepage"><div><div><h3 class="title" id="sec.1_2"><span class="number">3.5 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Release 1.2, August 2018</span> <a title="Permalink" class="permalink" href="index.html#sec.1_2">#</a></h3><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.1_2</li></ul></div></div></div></div><div class="sect3" id="sec.1_2.feature"><div class="titlepage"><div><div><h4 class="title" id="sec.1_2.feature"><span class="number">3.5.1 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Features and Fixes</span> <a title="Permalink" class="permalink" href="index.html#sec.1_2.feature">#</a></h4><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.1_2.feature</li></ul></div></div></div></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>Updated Stratos UI to v2</p></li><li class="listitem "><p>Updated SUSE Cloud Foundry to v2.11.0</p></li><li class="listitem "><p>Support for Amazon Elastic Container Service for Kubernetes and SUSE CaaS Platform v3</p></li><li class="listitem "><p>Support for Microsoft Azure load balancer enabled</p></li><li class="listitem "><p>Updated backup/restore plugin (v1.0.8)</p></li><li class="listitem "><p>New active/passive role management for pods whereby the past model of using <span class="emphasis"><em>Ready</em></span> and <span class="emphasis"><em>Not Ready</em></span>, as states has been retired. Pods will now be labeled as Active or Passive and rely on stateful sets to be managed, allowing for more high availability. Details available here: <a class="link" href="https://github.com/SUSE/fissile/wiki/Pod-Management-using-Role-Manifest-Tags" target="_blank">https://github.com/SUSE/fissile/wiki/Pod-Management-using-Role-Manifest-Tags</a></p></li><li class="listitem "><p>All roles aside from UAA can now be HA</p></li><li class="listitem "><p>Certificate expiration now configurable</p></li><li class="listitem "><p>Added support for manual rotation of cloud controller database keys</p></li><li class="listitem "><p>Exposed the <code class="literal">router.client_cert_validation</code> property on the router</p></li><li class="listitem "><p>Use namespace for helm install name</p></li><li class="listitem "><p>Updated the role manifest validation to let the secrets generator use <code class="literal">KUBE_SERVICE_DOMAIN_SUFFIX</code> without having to configure HA itself</p></li><li class="listitem "><p><code class="literal">SCF_LOG_PORT</code> now set to default port of 514</p></li><li class="listitem "><p>Fixed an issue during upgrade whereby USB sidecars did not receive updated password info, ensuring they will properly communicate with previously registered services</p></li><li class="listitem "><p>Patched an issue with the timestamp for <code class="literal">monit_rsyslogd</code></p></li><li class="listitem "><p><code class="literal">cf-backup-restore</code> restores security groups properly now</p></li><li class="listitem "><p><code class="literal">cf-backup-restore</code> now relies on statically linked Linux binaries</p></li><li class="listitem "><p>Includes these Cloud Foundry component versions:</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>UAA: v59</p></li><li class="listitem "><p>cf-deployment: 1.36</p></li><li class="listitem "><p>ruby-buildpack: 1.7.18.2</p></li><li class="listitem "><p>go-buildpack: 1.8.22.1</p></li><li class="listitem "><p>kubectl: 1.8.2</p></li><li class="listitem "><p>capi-release: 1.58.0</p></li><li class="listitem "><p>cflinuxfs2-release: v1.209.0</p></li><li class="listitem "><p>cf-mysql-release: v36.14.0</p></li><li class="listitem "><p>cf-opensuse42-release: 054a0ca</p></li><li class="listitem "><p>cf-sle12-release: faf946c</p></li><li class="listitem "><p>cf-smoke-tests-release: 40.0.5</p></li><li class="listitem "><p>cf-syslog-drain-release: v6.5</p></li><li class="listitem "><p>cf-usb: 7a45076</p></li><li class="listitem "><p>consul-release: v192</p></li><li class="listitem "><p>diego-release: v2.8.0-24-gad85f06a</p></li><li class="listitem "><p>garden-runc-release:  v1.11.1</p></li><li class="listitem "><p>loggregator-release: v102.1</p></li><li class="listitem "><p>nats-release: v24</p></li><li class="listitem "><p>nfs-volume-release: v1.2.0</p></li><li class="listitem "><p>postgres-release: v26</p></li><li class="listitem "><p>routing-release: 0.178.0</p></li><li class="listitem "><p>scf-helper-release: b276460</p></li><li class="listitem "><p>cf-acceptance-tests: 22c36ddc</p></li><li class="listitem "><p>testbrain: 1.0.0-61-ga172cf9</p></li><li class="listitem "><p>statsd-injector-release: v1.3.0</p></li><li class="listitem "><p>uaa-fissile-release: 0.0.1-289-g571836a</p></li></ul></div></li><li class="listitem "><p>Buildpacks:</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>binary-buildpack-release: 1.0.17</p></li><li class="listitem "><p>dotnet-core-buildpack-release: 1.0.26-14-gf951834</p></li><li class="listitem "><p>go-buildpack-release: 1.7.19-17-g9dbf944</p></li><li class="listitem "><p>java-buildpack-release: 3.16-18-gfeab2b6</p></li><li class="listitem "><p>nodejs-buildpack-release: 1.5.30-13-g584d686</p></li><li class="listitem "><p>php-buildpack-release: 3dc85f9</p></li><li class="listitem "><p>python-buildpack-release: 1.5.16-14-ga2bbb4c</p></li><li class="listitem "><p>ruby-buildpack-release: ffffb58</p></li><li class="listitem "><p>staticfile-buildpack-release: 1.4.0-12-gdfc6c09</p></li></ul></div></li></ul></div></div><div class="sect3" id="sec.1_2.issue"><div class="titlepage"><div><div><h4 class="title" id="sec.1_2.issue"><span class="number">3.5.2 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Known Issues</span> <a title="Permalink" class="permalink" href="index.html#sec.1_2.issue">#</a></h4><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.1_2.issue</li></ul></div></div></div></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>Upgrading to SUSE Cloud Application Platform 1.2 introduces a new active/passive model that will result in a longer-than-usual app instance downtime for upgrades to this new version. As part of this change, you will need to run the <code class="literal">helm upgrade</code> command with two additional parameters: <code class="literal">helm upgrade --force --recreate-pods</code>. This will be noticeable when seeing Kubernetes pods marked as <span class="emphasis"><em>Unready</em></span>. <span class="emphasis"><em>Unready</em></span> pods will not be upgraded.</p></li><li class="listitem "><p>SUSE CaaS Platform 3 uses an updated version of Kubernetes that mandates a stricter security policy via PodSecurityPolicy (PSP) which is included as part of the <span class="emphasis"><em>SUSE Cloud Application Platform Deployment Guide</em></span>. This was optional in SUSE CaaS Platform 2 but it works the same. Any namespace tied to SUSE Cloud Application Platform requires privileged ports to be accessible needs to have to have a PSP set appropriately for access. This would include the default conventions of <code class="literal">scf</code>, <code class="literal">uaa</code>, <code class="literal">stratos-ui</code>, <code class="literal">mysql-sidecar</code> and <code class="literal">postgres-sidecar</code> as per our documentation.</p></li><li class="listitem "><p>UAA should be left as single availability and not high availability (HA)</p></li></ul></div></div></div><div class="sect2" id="sec.1_1_1"><div class="titlepage"><div><div><h3 class="title" id="sec.1_1_1"><span class="number">3.6 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Release 1.1.1, May 2018</span> <a title="Permalink" class="permalink" href="index.html#sec.1_1_1">#</a></h3><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.1_1_1</li></ul></div></div></div></div><div class="sect3" id="sec.1_1_1.feature"><div class="titlepage"><div><div><h4 class="title" id="sec.1_1_1.feature"><span class="number">3.6.1 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Features and Fixes</span> <a title="Permalink" class="permalink" href="index.html#sec.1_1_1.feature">#</a></h4><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.1_1_1.feature</li></ul></div></div></div></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>Includes SCF v2.10.1</p></li><li class="listitem "><p>Enabled <code class="literal">router.forwarded_client_cert</code> variable for router</p></li><li class="listitem "><p>New syslog roles can have anti-affinity</p></li><li class="listitem "><p>MySQL-proxy healthcheck timeouts are configurable</p></li><li class="listitem "><p>cfdot added to all diego roles</p></li><li class="listitem "><p>Removed time stamp check for rsyslog</p></li><li class="listitem "><p>Upgrades will handle certificates better by having the required SAN metadata</p></li><li class="listitem "><p>Rotatable secrets are now immutable</p></li><li class="listitem "><p>Immutable config variables will not be generated</p></li><li class="listitem "><p>For high availability (HA) configurations, upgrades no longer require the <code class="literal">api</code> role to be scaled down</p></li><li class="listitem "><p><code class="literal">cf-backup-restore</code> handles Docker apps properly now</p></li><li class="listitem "><p><code class="literal">cf-backup-restore</code> returns a useful error if invalid JSON is parsed</p></li><li class="listitem "><p>PHP buildpack has been bumped to v.4.3.53.1 address MS-ISAC ADVISORY NUMBER 2018-046</p></li><li class="listitem "><p>Updated sidecars for MySQL and PostgreSQL</p></li><li class="listitem "><p>Includes these Cloud Foundry component versions:</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>uaa: v56.0</p></li><li class="listitem "><p>cf-deployment: v.1.21</p></li><li class="listitem "><p>loggregator-release: v102.1</p></li><li class="listitem "><p>cf-opensuse42-release: 459ef9f</p></li><li class="listitem "><p>cf-syslog-drain-release: v6.0</p></li><li class="listitem "><p>cf-usb: 79b1a8c</p></li><li class="listitem "><p>cf-mysql-release: v36.11.0</p></li><li class="listitem "><p>routing-release: 0.174.0</p></li><li class="listitem "><p>cf-sle12-release: b96cbc2</p></li><li class="listitem "><p>diego-release: v2.1.0</p></li><li class="listitem "><p>uaa-fissile-release: 0.0.1-243-ge11bf8d</p></li><li class="listitem "><p>cflinuxfs2-release: v1.194.0</p></li><li class="listitem "><p>cf-smoke-tests-release: 40.0.1</p></li><li class="listitem "><p>nats-release: v23</p></li><li class="listitem "><p>scf-helper-release/src/github.com/cloudfoundry/cf-acceptance-tests: 3beb6ed</p></li><li class="listitem "><p>capi-release: 1.52.0</p></li></ul></div></li></ul></div></div><div class="sect3" id="sec.1_1_1.issue"><div class="titlepage"><div><div><h4 class="title" id="sec.1_1_1.issue"><span class="number">3.6.2 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Known Issues</span> <a title="Permalink" class="permalink" href="index.html#sec.1_1_1.issue">#</a></h4><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.1_1_1.issue</li></ul></div></div></div></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>Upgrading now rotates all internal passwords and certificates which may cause some downtime (for example, users will be unable to push applications) as the roles are restarted. This should not impact the availability of hosted applications running multiple instances.</p></li><li class="listitem "><p>If you are using the bundled UAA release, upgrade this first and pass the new certificate to the SUSE Cloud Foundry upgrade command as outlined in the upgrade instructions below.</p></li><li class="listitem "><p>When upgrading, existing deployments of the <code class="literal">cf-usb-sidecar-mysql</code> or <code class="literal">cf-usb-sidecar-postgres</code> brokers may subsequently be unable to delete service instances. The following commands fix this problem by updating the internal cf-usb password:</p><div class="verbatim-wrap"><pre class="screen">CF_NAMESPACE=scf
+SECRET=$(kubectl get --namespace $CF_NAMESPACE deploy -o json \
+  | jq -r '[.items[].spec.template.spec.containers[].env[] \
+  | select(.name == "INTERNAL_CA_CERT").valueFrom.secretKeyRef.name] \
+  | unique[]')
+USB_PASSWORD=$(kubectl get -n scf secret $SECRET -o jsonpath='{@.data.cf-usb-password}' \
+  | base64 -d)
+USB_ENDPOINT=$(cf curl /v2/service_brokers \
+  | jq -r '.resources[] | select(.entity.name=="usb").entity.broker_url')
+cf update-service-broker usb broker-admin "$USB_PASSWORD" "$USB_ENDPOINT"</pre></div></li><li class="listitem "><p>If after upgrading:</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>the <code class="literal">diego-api</code> role is not fully functional (i.e. appearing as <code class="literal">(0/1)</code>)</p></li><li class="listitem "><p>the <code class="literal">bbs</code> job in the pod is not starting (as per <code class="literal">monit summary</code>)</p></li><li class="listitem "><p>the bbs stdout log <code class="literal">/var/vcap/sys/log/bbs/bbs.stdout.log</code> contains <span class="emphasis"><em>Error 1062: Duplicate entry 'version' for key 'PRIMARY'</em></span></p><p>Do the following to unblock the upgrade:</p></li><li class="listitem "><p><code class="literal">kubectl exec</code> into (one of) the mysql pod(s)</p><div class="verbatim-wrap"><pre class="screen">kubectl exec -it mysql-0 --namespace cf -- env TERM=xterm /bin/bash</pre></div></li><li class="listitem "><p>Use <code class="literal">mysql</code> to connect to the diego database</p><div class="verbatim-wrap"><pre class="screen">mysql --defaults-file=/var/vcap/jobs/mysql/config/mylogin.cnf diego</pre></div></li><li class="listitem "><p>Remove the offending entry</p><div class="verbatim-wrap"><pre class="screen">DELETE FROM configurations WHERE id='version';</pre></div></li></ul></div></li><li class="listitem "><p>Do not set the <code class="literal">mysql-proxy</code>, <code class="literal">routing-api</code>, <code class="literal">tcp-router</code>, <code class="literal">blobstore</code> or
+<code class="literal">diego_access</code> roles to more than one instance each. Doing so can cause problems
+with subsequent upgrades which could lead to loss of data. Scalability of these
+roles will be enabled in an upcoming maintenance release.</p></li><li class="listitem "><p>The <code class="literal">diego-api</code>, <code class="literal">diego-brain</code> and <code class="literal">routing-api</code> roles are configured as
+active/passive, and passive pods can appear as <span class="emphasis"><em>Not Ready</em></span>. This is expected
+behavior.</p></li><li class="listitem "><p>Microsoft Azure operators may not be able to connect to Microsoft Azure Database for
+MySQL/PostgreSQL databases with the current brokers.</p></li></ul></div></div></div><div class="sect2" id="sec.1_1"><div class="titlepage"><div><div><h3 class="title" id="sec.1_1"><span class="number">3.7 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Release 1.1, April 2018</span> <a title="Permalink" class="permalink" href="index.html#sec.1_1">#</a></h3><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.1_1</li></ul></div></div></div></div><div class="sect3" id="sec.1_1.new"><div class="titlepage"><div><div><h4 class="title" id="sec.1_1.new"><span class="number">3.7.1 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">What Is New?</span> <a title="Permalink" class="permalink" href="index.html#sec.1_1.new">#</a></h4><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.1_1.new</li></ul></div></div></div></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>Now supported on Microsoft Azure Container Services (AKS)</p></li><li class="listitem "><p>Cloud Foundry component and buildpack updates (see <a class="xref" href="index.html#sec.1_1.feature" title="3.7.2. Features and Fixes">Section 3.7.2, “Features and Fixes”</a>)</p></li><li class="listitem "><p>PostgreSQL and MySQL service broker sidecars, configured and deployed via Helm</p></li><li class="listitem "><p>cf backup+ CLI plugin for saving, restoring, or migrating CF data and
+applications</p></li></ul></div><p>For more information about deploying SUSE Cloud Application Platform, see the <span class="emphasis"><em>Deployment Guide</em></span> at
+<a class="link" href="https://www.suse.com/documentation/cloud-application-platform-1/book_cap_guides/data/part_cap_deployment.html" target="_blank">https://www.suse.com/documentation/cloud-application-platform-1/book_cap_guides/data/part_cap_deployment.html</a>.</p></div><div class="sect3" id="sec.1_1.feature"><div class="titlepage"><div><div><h4 class="title" id="sec.1_1.feature"><span class="number">3.7.2 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Features and Fixes</span> <a title="Permalink" class="permalink" href="index.html#sec.1_1.feature">#</a></h4><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.1_1.feature</li></ul></div></div></div></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>Includes SCF v2.8.0</p></li><li class="listitem "><p>Ability to specify multiple external IP addresses (see <a class="xref" href="index.html#sec.1_1.issue" title="3.7.4. Known Issues">Section 3.7.4, “Known Issues”</a>
+below on impact to upgrades)</p></li><li class="listitem "><p>MySQL now a clustered role</p></li><li class="listitem "><p>MySQL-proxy enabled for UAA</p></li><li class="listitem "><p>UAA has more logging enabled, so <code class="literal">SCF_LOG_HOST</code>, <code class="literal">SCF_LOG_PORT</code> and
+<code class="literal">SCF_LOG_PROTOCOL</code> have been exposed</p></li><li class="listitem "><p>TCP routing ports are configurable and can be templatized</p></li><li class="listitem "><p>CPU limits can be set for pods.</p></li><li class="listitem "><p>Memory limits for pods now properly enforced.</p></li><li class="listitem "><p>Kubernetes annotations enabled so operators can specify what nodes
+particular roles can be run on</p></li><li class="listitem "><p>Fixed cloud controller clock so that it will wait until API is ready</p></li><li class="listitem "><p>Overhauled secret rotation for upgrades</p></li><li class="listitem "><p>Includes these CF component versions:</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>diego-release 1.35</p></li><li class="listitem "><p>cf-mysql-release 36.10.0</p></li><li class="listitem "><p>cflinuxfs2-release 1.187.0</p></li><li class="listitem "><p>routing-release 0.172.0</p></li><li class="listitem "><p>garden-runc-release 1.11.1</p></li><li class="listitem "><p>nats-release 22</p></li><li class="listitem "><p>capi-release 1.49.0</p></li></ul></div></li><li class="listitem "><p>Includes these Cloud Foundry buildpack versions:</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>go-buildpack-release 1.7.19-16-g37cc6b4</p></li><li class="listitem "><p>binary-buildpack-release 1.0.17</p></li><li class="listitem "><p>nodejs-buildpack-release 1.5.30-13-g584d686</p></li><li class="listitem "><p>ruby-buildpack-release 9adff61</p></li><li class="listitem "><p>php-buildpack-release ea8acd0</p></li><li class="listitem "><p>python-buildpack-release 1.5.16-14-ga2bbb4c</p></li><li class="listitem "><p>staticfile-buildpack-release 1.4.0-12-gdfc6c09</p></li><li class="listitem "><p>dotnet-core-buildpack-release 1.0.26-14-gf951834</p></li><li class="listitem "><p>java-buildpack-release 3.16-18-gfeab2b6</p></li></ul></div></li></ul></div></div><div class="sect3" id="sec.1_1.configuration"><div class="titlepage"><div><div><h4 class="title" id="sec.1_1.configuration"><span class="number">3.7.3 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Configuration Changes</span> <a title="Permalink" class="permalink" href="index.html#sec.1_1.configuration">#</a></h4><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.1_1.configuration</li></ul></div></div></div></div><p>Changes to the format of <code class="literal">values.yaml</code> for SCF and UAA require
+special handling when upgrading from SUSE Cloud Application Platform 1.0 to 1.1 if you are reusing
+configuration files (for example, <code class="literal">scf-config-values.yaml</code>):</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>All secrets formerly set under <code class="literal">env:</code> are now set under <code class="literal">secrets:</code>.
+Any <code class="literal">_PASSWORD</code>, <code class="literal">_SECRET</code>, <code class="literal">_CERT</code>, or <code class="literal">_KEY</code> value explicitly set in
+<code class="literal">values.yaml</code> for SUSE Cloud Application Platform 1.0 should be moved into the <code class="literal">secrets:</code> section
+before running <code class="literal">helm upgrade</code> with the revised <code class="literal">values.yaml</code>. Find a sample
+configuration in <a class="xref" href="index.html#app.secret-sample" title="8. Appendix: Configuration with secrets: Section">Section 8, “Appendix: Configuration with <code class="literal">secrets:</code> Section”</a>.</p></li><li class="listitem "><p><span class="strong"><strong>These secrets must be resupplied on each upgrade</strong></span> (for example, the
+<code class="literal">CLUSTER_ADMIN_PASSWORD</code>, <code class="literal">UAA_ADMIN_CLIENT_SECRET</code>) as they will not be carried
+forward automatically. We recommend always using a values file.</p></li><li class="listitem "><p>To rotate secrets, increment the <code class="literal">kube.secrets_generation_counter</code>
+(immutable generated secrets will not be reset).</p></li><li class="listitem "><p>The <code class="literal">kube.external_ip</code> variable has been changed to <code class="literal">kube.external_ips</code>,
+allowing for services to be exposed on multiple Kubernetes worker nodes (for
+example, behind a TCP load balancer). Before upgrading, change the setting or
+add a new setting specified as an array. For example:</p><div class="verbatim-wrap"><pre class="screen">kube.external_ip=10.1.1.1
+kube.external_ips=["10.1.1.1"]</pre></div></li><li class="listitem "><p>Both variables can exist at the same time and be set to the same value for
+those in mixed version environments. To specify multiple addresses, use:</p><div class="verbatim-wrap"><pre class="screen">kube.external_ips=["1.1.1.1", "2.2.2.2"]</pre></div></li><li class="listitem "><p>Upgrading from SUSE Cloud Application Platform 1.0.1 to 1.1</p><p>An example <code class="literal">scf-config-values.yaml</code> for SUSE Cloud Application Platform 1.1 would look like this:</p><div class="verbatim-wrap highlight yaml"><pre class="programlisting">env:
+    # Domain for SCF. DNS for *.DOMAIN must point to a kube node's (not master)
+    # external ip address.
+    DOMAIN: cf-dev.io
+
+kube:
+    # The IP address assigned to the kube node pointed to by the domain.
+    #### the external_ip setting changed to accept a list of IPs, and was
+    #### renamed to external_ips
+    external_ips: ["192.168.77.77"]
+    storage_class:
+        # Make sure to change the value in here to whatever storage class you use
+        persistent: "persistent"
+        shared: "shared"
+
+    # The registry the images will be fetched from. The values below should work for
+    # a default installation from the suse registry.
+    registry:
+       hostname: "registry.suse.com"
+       username: ""
+       password: ""
+    organization: "cap"
+
+    auth: rbac
+
+secrets:
+    # Password for user 'admin' in the cluster
+    CLUSTER_ADMIN_PASSWORD: changeme
+
+    # Password for SCF to authenticate with UAA
+    UAA_ADMIN_CLIENT_SECRET: uaa-admin-client-secret</pre></div><p>To upgrade from SUSE Cloud Application Platform 1.0.1 to 1.1, run the following commands:</p><div class="verbatim-wrap highlight bash"><pre class="programlisting">$ helm repo update
+$ helm upgrade --recreate-pods &lt;uaa-helm-release-name&gt; suse/uaa --values scf-config-values.yaml
+$ SECRET=$(kubectl get pods --namespace uaa -o jsonpath='{.items[*].spec.containers[?(.name=="uaa")].env[?(.name=="INTERNAL_CA_CERT")].valueFrom.secretKeyRef.name}')
+$ CA_CERT="$(kubectl get secret $SECRET --namespace uaa -o jsonpath="{.data['internal-ca-cert']}" | base64 --decode -)"
+$ helm upgrade --recreate-pods &lt;scf-helm-release-name&gt; suse/cf --values scf-config-values.yaml --set "secrets.UAA_CA_CERT=${CA_CERT}"
+$ helm upgrade --recreate-pods &lt;console-helm-release-name&gt; suse/console --values scf-config-values.yaml</pre></div></li></ul></div></div><div class="sect3" id="sec.1_1.issue"><div class="titlepage"><div><div><h4 class="title" id="sec.1_1.issue"><span class="number">3.7.4 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Known Issues</span> <a title="Permalink" class="permalink" href="index.html#sec.1_1.issue">#</a></h4><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.1_1.issue</li></ul></div></div></div></div><div id="id-1.6.8.5.2" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important</h6><p>You will need Stratos UI 1.1 when running SUSE Cloud Application Platform 1.1 and you
+share the <code class="literal">scf-values.yaml</code> configuration file between them. Prior versions
+of the Stratos UI will not work.</p></div><div id="id-1.6.8.5.3" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important</h6><p>If you have used a configuration file from a version prior to
+1.1, you will need to update it. See details below.</p></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>The variable <code class="literal">kube.external_ip</code> has now been renamed to
+<code class="literal">kube.external_ips</code>, meaning upgrades from older versions will fail unless
+the latter variable exists in the <code class="literal">scf-values.yaml</code> file used to deploy
+SUSE Cloud Application Platform. Both variables can exist at the same time and be set to the same
+value for those in mixed version environments:</p><div class="verbatim-wrap"><pre class="screen">kube.external_ip=1.1.1.1
+kube.external_ips=[1.1.1.1]</pre></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>Going forward, <code class="literal">kube.external_ips</code> is an array, hence it can be used as
+reproduced below:</p><div class="verbatim-wrap"><pre class="screen">kube.external_ips=[“1.1.1.1”, “2.2.2.2”]</pre></div></li><li class="listitem "><p>Also as a result of this change, the <code class="literal">helm</code> command line client must be version 2.6.0 or higher.</p></li><li class="listitem "><p>All the secrets have been renamed from <code class="literal">env.FOO</code> to <code class="literal">secrets.FOO</code>, so all
+the appropriate entries in <code class="literal">scf-values.yaml</code> need to be modified to align with
+that change.</p></li><li class="listitem "><p>You need to keep specifying <span class="strong"><strong>all</strong></span> your secrets on each upgrade (for example,
+the <code class="literal">CLUSTER_ADMIN_PASSWORD</code>) as it will not be carried forward automatically.</p></li><li class="listitem "><p>To rotate secrets, increment the <code class="literal">kube.secret_generation_counter</code>. Note
+that immutable generated secrets will not be reset.</p></li></ul></div></li><li class="listitem "><p>In HA environments, upgrades can run into an issue whereby the API pods do
+not all come up post-migration. The work around this issue, before the
+upgrade, scale down the API role to 1. After completing the upgrade, scale
+the API role up again to 2 or more.</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>Some roles (like diego-api, diego-brain and routing-api) are configured as
+active/passive, so passive pods can appear as <code class="literal">Not Ready</code>.</p></li><li class="listitem "><p>Other roles (tcp-router and blobstore) cannot be scaled.</p></li></ul></div></li><li class="listitem "><p>Cloud Application Platform v1.1 requires that Stratos UI use version 1.1.
+Older versions of the UI will not work due to the change in variable names.</p></li><li class="listitem "><p>Azure operators may not be able to connect to SQL databases with the sidecar.</p></li><li class="listitem "><p>Restores performed by the Backup CLI may leave docker apps in a stopped state.
+The workaround is to restart the affected applications.</p></li><li class="listitem "><p>A proper JSON file generated by the Backup CLI needs to be provided in order
+to do a restore, otherwise an ugly error appears.</p></li><li class="listitem "><p>Do not set the <code class="literal">mysql-proxy</code>, <code class="literal">routing-api</code>, <code class="literal">tcp-router</code>, <code class="literal">blobstore</code> or
+<code class="literal">diego_access</code> roles to more than one instance each. Doing so can cause problems
+with subsequent upgrades which could lead to loss of data. Scalability of these
+roles will be enabled in an upcoming maintenance release.</p></li><li class="listitem "><p>To upgrade high availability (HA) configurations, scale down the <code class="literal">api</code>
+role count to 1. Then upon completing the upgrade, scale <code class="literal">api</code> up again to
+2 or more.</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>The <code class="literal">diego-api</code>, <code class="literal">diego-brain</code> and <code class="literal">routing-api</code> roles are configured as
+active/passive, and passive pods can appear as <span class="emphasis"><em>Not Ready</em></span>. This is expected
+behavior.</p></li></ul></div></li><li class="listitem "><p>Azure operators may not be able to connect to Azure Database for
+MySQL/PostgreSQL databases with the current brokers.</p></li><li class="listitem "><p><code class="literal">cf backup-restore</code> may leave Docker apps in a stopped state. These can be
+started manually.</p></li><li class="listitem "><p><code class="literal">cf backup-restore</code> produces an unhelpful error if the file is not valid JSON.</p></li></ul></div></div></div><div class="sect2" id="sec.1_0_1"><div class="titlepage"><div><div><h3 class="title" id="sec.1_0_1"><span class="number">3.8 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Release 1.0.1, February 2018</span> <a title="Permalink" class="permalink" href="index.html#sec.1_0_1">#</a></h3><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.1_0_1</li></ul></div></div></div></div><div class="sect3" id="sec.1_0_1.feature"><div class="titlepage"><div><div><h4 class="title" id="sec.1_0_1.feature"><span class="number">3.8.1 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Features and Fixes</span> <a title="Permalink" class="permalink" href="index.html#sec.1_0_1.feature">#</a></h4><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.1_0_1.feature</li></ul></div></div></div></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>Using the <code class="literal">helm upgrade</code> command in SUSE Cloud Application Platform 1.0 to 1.0.1 (scf 2.6.11 to
+2.7.0) requires the use of <code class="literal">--force</code> to drop an unnecessary persistent
+volume. Note that <code class="literal">helm upgrade</code> only works for multi-node clusters when
+running with a proper HA storage class. For example, <code class="literal">hostpath</code> will not
+work, as required stateful data can be lost.</p></li><li class="listitem "><p>Bump to Cloud Foundry Deployment (1.9.0), using Cloud Foundry Deployment not Cloud Foundry Release
+from now on</p></li><li class="listitem "><p>Bump UAA to v53.3</p></li><li class="listitem "><p>Add ability to rename immutable secrets</p></li><li class="listitem "><p>Update CATS to be closer to what upstream is using</p></li><li class="listitem "><p>Make RBAC the default in the values.yaml (no need to specify anymore)</p></li><li class="listitem "><p>Increase test brain timeouts to stop randomly failing tests</p></li><li class="listitem "><p>Remove unused SANs from the generated TLS certificates</p></li><li class="listitem "><p>Remove the dependency on jq from stemcells</p></li><li class="listitem "><p>Fix duplicate buildpack ids when starting Cloud Foundry</p></li><li class="listitem "><p>Fix an issue in the vagrant box where compilation would fail due to old
+versions of docker.</p></li><li class="listitem "><p>Fix an issue where diego cell could not be mounted on NFS-backed Kubernetes
+storage class</p></li><li class="listitem "><p>Fix an issue where diego cell could not mount NFS in persi</p></li><li class="listitem "><p>Fix several problems reported with the syslog-forwarding implementation</p></li></ul></div></div><div class="sect3" id="sec.1_0_1.issue"><div class="titlepage"><div><div><h4 class="title" id="sec.1_0_1.issue"><span class="number">3.8.2 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Known Issues</span> <a title="Permalink" class="permalink" href="index.html#sec.1_0_1.issue">#</a></h4><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.1_0_1.issue</li></ul></div></div></div></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>Do not set the <code class="literal">mysql</code> or <code class="literal">diego_access</code> roles to more than one instance each
+in HA configurations. Doing so can cause problems with subsequent upgrades
+which could lead to loss of data. Scalability of these roles will be enabled
+in an upcoming maintenance release.</p></li><li class="listitem "><p>A <code class="literal">helm upgrade</code> command from 1.0 to 1.0.1 (scf 2.6.11 to 2.7.0) requires the
+use of <code class="literal">--force</code> to drop an unnecessary persistent volume. Note that
+<code class="literal">helm upgrade</code> only works for multi-node clusters when running with a proper
+HA storage class (for example, <code class="literal">hostpath</code> will not work as required stateful
+data can be lost).</p></li></ul></div></div></div><div class="sect2" id="sec.1_0"><div class="titlepage"><div><div><h3 class="title" id="sec.1_0"><span class="number">3.9 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Release 1.0, January 2018</span> <a title="Permalink" class="permalink" href="index.html#sec.1_0">#</a></h3><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.1_0</li></ul></div></div></div></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>Initial product release</p></li></ul></div></div></div><div class="sect1" id="sec.caasp"><div class="titlepage"><div><div><h2 class="title" id="sec.caasp"><span class="number">4 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Deploying SUSE Cloud Application Platform on SUSE Containers as a Service Platform</span> <a title="Permalink" class="permalink" href="index.html#sec.caasp">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.caasp</li></ul></div></div></div></div><p>For supported ways to deploy SUSE Cloud Application Platform on SUSE Containers as a Service Platform, follow the deployment
+guides for your chosen infrastructure platform:</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p><a class="link" href="https://www.suse.com/documentation/suse-caasp-3/book_caasp_deployment/data/book_caasp_deployment.html" target="_blank">Bare Metal or Non-OpenStack Virtualization Platforms</a></p></li><li class="listitem "><p><a class="link" href="https://www.suse.com/documentation/suse-openstack-cloud-8/book_installation/data/sec_heat_templates_install.html" target="_blank">SUSE OpenStack Cloud</a></p></li></ul></div><p>Following the above guides will provide you with a fully supported SUSE Containers as a Service Platform environment that you can subsequently use to install SUSE Cloud Application Platform using the <a class="link" href="https://www.suse.com/documentation/cloud-application-platform-1/book_cap_guides/data/part_cap_deployment.html" target="_blank">SUSE Cloud Application Platform Deployment Guide</a>.</p></div><div class="sect1" id="_installing_suse_cloud_application_platform_on_microsoft_azure"><div class="titlepage"><div><div><h2 class="title" id="_installing_suse_cloud_application_platform_on_microsoft_azure"><span class="number">5 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Installing SUSE Cloud Application Platform on Microsoft Azure</span> <a title="Permalink" class="permalink" href="index.html#_installing_suse_cloud_application_platform_on_microsoft_azure">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>_installing_suse_cloud_application_platform_on_microsoft_azure</li></ul></div></div></div></div><p>For instructions on installing SUSE Cloud Application Platform on Microsoft Azure, see the official
+documentation at <a class="link" href="https://www.suse.com/documentation/cloud-application-platform-1/book_cap_guides/data/cha_cap_depl-azure.html" target="_blank">https://www.suse.com/documentation/cloud-application-platform-1/book_cap_guides/data/cha_cap_depl-azure.html</a>.</p></div><div class="sect1" id="sec.source"><div class="titlepage"><div><div><h2 class="title" id="sec.source"><span class="number">6 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Obtaining Source Code</span> <a title="Permalink" class="permalink" href="index.html#sec.source">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.source</li></ul></div></div></div></div><p>This SUSE product includes materials licensed to SUSE under the GNU
+General Public License (GPL). The GPL requires SUSE to provide the
+source code that corresponds to the GPL-licensed material. The source code
+is available for download at
+<a class="link" href="https://www.suse.com/download-linux/source-code.html" target="_blank">https://www.suse.com/download-linux/source-code.html</a>. Also,
+for up to three years after distribution of the SUSE product, upon
+request, SUSE will mail a copy of the source code. Requests should be
+sent by e-mail to <a class="link" href="mailto:sle_source_request@suse.com" target="_blank">sle_source_request@suse.com</a> or as
+otherwise instructed at
+<a class="link" href="https://www.suse.com/download-linux/source-code.html" target="_blank">https://www.suse.com/download-linux/source-code.html</a>. SUSE
+may charge a reasonable fee to recover distribution costs.</p></div><div class="sect1" id="sec.legal"><div class="titlepage"><div><div><h2 class="title" id="sec.legal"><span class="number">7 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Legal Notices</span> <a title="Permalink" class="permalink" href="index.html#sec.legal">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>sec.legal</li></ul></div></div></div></div><p>SUSE makes no representations or warranties with regard to the contents
+or use of this documentation, and specifically disclaims any express or
+implied warranties of merchantability or fitness for any particular
+purpose. Further, SUSE reserves the right to revise this publication
+and to make changes to its content, at any time, without the obligation
+to notify any person or entity of such revisions or changes.</p><p>Further, SUSE makes no representations or warranties with regard to any
+software, and specifically disclaims any express or implied warranties of
+merchantability or fitness for any particular purpose. Further, SUSE
+reserves the right to make changes to any and all parts of SUSE
+software, at any time, without any obligation to notify any person or
+entity of such changes.</p><p>Any products or technical information provided under this Agreement may
+be subject to U.S. export controls and the trade laws of other countries.
+You agree to comply with all export control regulations and to obtain any
+required licenses or classifications to export, re-export, or import
+deliverables. You agree not to export or re-export to entities on the
+current U.S. export exclusion lists or to any embargoed or terrorist
+countries as specified in U.S. export laws. You agree to not use
+deliverables for prohibited nuclear, missile, or chemical/biological
+weaponry end uses. Refer to <a class="link" href="https://www.suse.com/company/legal/" target="_blank">https://www.suse.com/company/legal/</a> for more
+information on exporting SUSE software. SUSE assumes no responsibility
+for your failure to obtain any necessary export approvals.</p><p>Copyright © 2017-2018 SUSE LLC.</p><p>This release notes document is licensed under a Creative Commons
+Attribution-ShareAlike 4.0 International License (CC-BY-SA-4.0). You should
+have received a copy of the license along with this document. If not, see
+<a class="link" href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank">https://creativecommons.org/licenses/by-nd/4.0/</a>.</p><p>SUSE has intellectual property rights relating to technology embodied
+in the product that is described in this document. In particular, and
+without limitation, these intellectual property rights may include one or
+more of the U.S. patents listed at <a class="link" href="https://www.suse.com/company/legal/" target="_blank">https://www.suse.com/company/legal/</a>
+and one or more additional patents or pending patent applications in the U.S.
+and other countries.</p><p>For SUSE trademarks, see SUSE Trademark and Service Mark list
+(<a class="link" href="https://www.suse.com/company/legal/" target="_blank">https://www.suse.com/company/legal/</a>). All third-party
+trademarks are the property of their respective owners.</p></div><div class="sect1" id="app.secret-sample"><div class="titlepage"><div><div><h2 class="title" id="app.secret-sample"><span class="number">8 </span><span xmlns:dm="urn:x-suse:ns:docmanager" class="name">Appendix: Configuration with <code class="literal">secrets:</code> Section</span> <a title="Permalink" class="permalink" href="index.html#app.secret-sample">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">File Name: </span>release-notes.xml</li><li><span class="ds-label">ID: </span>app.secret-sample</li></ul></div></div></div></div><div class="verbatim-wrap highlight yaml"><pre class="programlisting">---
+env:
+  # List of domains (including scheme) from which Cross-Origin requests will be
+  # accepted, a * can be used as a wildcard for any part of a domain.
+  ALLOWED_CORS_DOMAINS: "[]"
+
+  # Allow users to change the value of the app-level allow_ssh attribute.
+  ALLOW_APP_SSH_ACCESS: "true"
+
+  # Extra token expiry time while uploading big apps, in seconds.
+  APP_TOKEN_UPLOAD_GRACE_PERIOD: "1200"
+
+  # List of allow / deny rules for the blobstore internal server. Will be
+  # followed by 'deny all'. Each entry must be follow by a semicolon.
+  BLOBSTORE_ACCESS_RULES: "allow 10.0.0.0/8; allow 172.16.0.0/12; allow 192.168.0.0/16;"
+
+  # Maximal allowed file size for upload to blobstore, in megabytes.
+  BLOBSTORE_MAX_UPLOAD_SIZE: "5000"
+
+  # The set of CAT test suites to run. If not specified it falls back to a
+  # hardwired set of suites.
+  CATS_SUITES: ~
+
+  # URI for a CDN to use for buildpack downloads.
+  CDN_URI: ""
+
+  # The Oauth2 authorities available to the cluster administrator.
+  CLUSTER_ADMIN_AUTHORITIES: "scim.write,scim.read,openid,cloud_controller.admin,clients.read,clients.write,doppler.firehose,routing.router_groups.read,routing.router_groups.write"
+
+  # 'build' attribute in the /v2/info endpoint
+  CLUSTER_BUILD: "2.0.2"
+
+  # 'description' attribute in the /v2/info endpoint
+  CLUSTER_DESCRIPTION: "SUSE Cloud Foundry"
+
+  # 'name' attribute in the /v2/info endpoint
+  CLUSTER_NAME: "SCF"
+
+  # 'version' attribute in the /v2/info endpoint
+  CLUSTER_VERSION: "2"
+
+  # The standard amount of disk (in MB) given to an application when not
+  # overriden by the user via manifest, command line, etc.
+  DEFAULT_APP_DISK_IN_MB: "1024"
+
+  # The standard amount of memory (in MB) given to an application when not
+  # overriden by the user via manifest, command line, etc.
+  DEFAULT_APP_MEMORY: "1024"
+
+  # If set apps pushed to spaces that allow SSH access will have SSH enabled by
+  # default.
+  DEFAULT_APP_SSH_ACCESS: "true"
+
+  # The default stack to use if no custom stack is specified by an app.
+  DEFAULT_STACK: "sle12"
+
+  # The container disk capacity the cell should manage. If this capacity is
+  # larger than the actual disk quota of the cell component, over-provisioning
+  # will occur.
+  DIEGO_CELL_DISK_CAPACITY_MB: "auto"
+
+  # The memory capacity the cell should manage. If this capacity is larger than
+  # the actual memory of the cell component, over-provisioning will occur.
+  DIEGO_CELL_MEMORY_CAPACITY_MB: "auto"
+
+  # Maximum network transmission unit length in bytes for application
+  # containers.
+  DIEGO_CELL_NETWORK_MTU: "1400"
+
+  # A CIDR subnet mask specifying the range of subnets available to be assigned
+  # to containers.
+  DIEGO_CELL_SUBNET: "10.38.0.0/16"
+
+  # Disable external buildpacks. Only admin buildpacks and system buildpacks
+  # will be available to users.
+  DISABLE_CUSTOM_BUILDPACKS: "false"
+
+  # The host to ping for confirmation of DNS resolution.
+  DNS_HEALTH_CHECK_HOST: "127.0.0.1"
+
+  # Base domain of the SCF cluster.
+  # Example: my-scf-cluster.com
+  DOMAIN: ~
+
+  # The number of versions of an application to keep. You will be able to
+  # rollback to this amount of versions.
+  DROPLET_MAX_STAGED_STORED: "5"
+
+  # Enables setting the X-Forwarded-Proto header if SSL termination happened
+  # upstream and the header value was set incorrectly. When this property is set
+  # to true, the gorouter sets the header X-Forwarded-Proto to https. When this
+  # value set to false, the gorouter sets the header X-Forwarded-Proto to the
+  # protocol of the incoming request.
+  FORCE_FORWARDED_PROTO_AS_HTTPS: "false"
+
+  # URL pointing to the Docker registry used for fetching Docker images. If not
+  # set, the Docker service default is used.
+  GARDEN_DOCKER_REGISTRY: "registry-1.docker.io"
+
+  # Whitelist of IP:PORT tuples and CIDR subnet masks. Pulling from docker
+  # registries with self signed certificates will not be permitted if the
+  # registry's address is not listed here.
+  GARDEN_INSECURE_DOCKER_REGISTRIES: ""
+
+  # Override DNS servers to be used in containers; defaults to the same as the
+  # host.
+  GARDEN_LINUX_DNS_SERVER: ""
+
+  # The filesystem driver to use (btrfs or overlay-xfs).
+  GARDEN_ROOTFS_DRIVER: "btrfs"
+
+  # Location of the proxy to use for secure web access.
+  HTTPS_PROXY: ~
+
+  # Location of the proxy to use for regular web access.
+  HTTP_PROXY: ~
+
+  KUBE_SERVICE_DOMAIN_SUFFIX: ~
+
+  # The cluster's log level: off, fatal, error, warn, info, debug, debug1,
+  # debug2.
+  LOG_LEVEL: "info"
+
+  # The maximum amount of disk a user can request for an application via
+  # manifest, command line, etc., in MB. See also DEFAULT_APP_DISK_IN_MB for the
+  # standard amount.
+  MAX_APP_DISK_IN_MB: "2048"
+
+  # Maximum health check timeout that can be set for an app, in seconds.
+  MAX_HEALTH_CHECK_TIMEOUT: "180"
+
+  # Sets the maximum allowed size of the client request body, specified in the
+  # “Content-Length” request header field, in megabytes. If the size in a
+  # request exceeds the configured value, the 413 (Request Entity Too Large)
+  # error is returned to the client. Please be aware that browsers cannot
+  # correctly display this error. Setting size to 0 disables checking of client
+  # request body size. This limits application uploads, buildpack uploads, etc.
+  NGINX_MAX_REQUEST_BODY_SIZE: "2048"
+
+  # Comma separated list of IP addresses and domains which should not be
+  # directed through a proxy, if any.
+  NO_PROXY: ~
+
+  # Comma separated list of white-listed options that may be set during create
+  # or bind operations.
+  # Example:
+  # uid,gid,allow_root,allow_other,nfs_uid,nfs_gid,auto_cache,fsname,username,password
+  PERSI_NFS_ALLOWED_OPTIONS: "uid,gid,auto_cache,username,password"
+
+  # Comma separated list of default values for nfs mount options. If a default
+  # is specified with an option not included in PERSI_NFS_ALLOWED_OPTIONS, then
+  # this default value will be set and it won't be overridable.
+  PERSI_NFS_DEFAULT_OPTIONS: ~
+
+  # Comma separated list of white-listed options that may be accepted in the
+  # mount_config options. Note a specific 'sloppy_mount:true' volume option
+  # tells the driver to ignore non-white-listed options, while a
+  # 'sloppy_mount:false' tells the driver to fail fast instead when receiving a
+  # non-white-listed option."
+  #
+  # Example:
+  # allow_root,allow_other,nfs_uid,nfs_gid,auto_cache,sloppy_mount,fsname
+  PERSI_NFS_DRIVER_ALLOWED_IN_MOUNT: "auto_cache"
+
+  # Comma separated list of white-listed options that may be configured in
+  # supported in the mount_config.source URL query params
+  #
+  # Example: uid,gid,auto-traverse-mounts,dircache
+  PERSI_NFS_DRIVER_ALLOWED_IN_SOURCE: "uid,gid"
+
+  # Comma separated list default values for options that may be configured in
+  # the mount_config options, formatted as 'option:default'. If an option is not
+  # specified in the volume mount, or the option is not white-listed, then the
+  # specified default value will be used instead.
+  #
+  # Example:
+  # allow_root:false,nfs_uid:2000,nfs_gid:2000,auto_cache:true,sloppy_mount:true
+  PERSI_NFS_DRIVER_DEFAULT_IN_MOUNT: "auto_cache:true"
+
+  # Comma separated list of default values for options in the source URL query
+  # params, formatted as 'option:default'. If an option is not specified in the
+  # volume mount, or the option is not white-listed, then the specified default
+  # value will be applied.
+  PERSI_NFS_DRIVER_DEFAULT_IN_SOURCE: ~
+
+  # Disable Persi NFS driver
+  PERSI_NFS_DRIVER_DISABLE: "false"
+
+  # LDAP server host name or ip address (required for LDAP integration only)
+  PERSI_NFS_DRIVER_LDAP_HOST: ""
+
+  # LDAP server port (required for LDAP integration only)
+  PERSI_NFS_DRIVER_LDAP_PORT: "389"
+
+  # LDAP server protocol (required for LDAP integration only)
+  PERSI_NFS_DRIVER_LDAP_PROTOCOL: "tcp"
+
+  # LDAP service account user name (required for LDAP integration only)
+  PERSI_NFS_DRIVER_LDAP_USER: ""
+
+  # LDAP fqdn for user records we will search against when looking up user uids
+  # (required for LDAP integration only)
+  # Example: cn=Users,dc=corp,dc=test,dc=com
+  PERSI_NFS_DRIVER_LDAP_USER_FQDN: ""
+
+  # Certficates to add to the rootfs trust store. Multiple certs are possible by
+  # concatenating their definitions into one big block of text.
+  ROOTFS_TRUSTED_CERTS: ""
+
+  # The algorithm used by the router to distribute requests for a route across
+  # backends. Supported values are round-robin and least-connection.
+  ROUTER_BALANCING_ALGORITHM: "round-robin"
+
+  # The log destination to talk to. This has to point to a syslog server.
+  SCF_LOG_HOST: ~
+
+  # The port used by rsyslog to talk to the log destination. If not set it
+  # defaults to 514, the standard port of syslog.
+  SCF_LOG_PORT: ~
+
+  # The protocol used by rsyslog to talk to the log destination. The allowed
+  # values are tcp, and udp. The default is tcp.
+  SCF_LOG_PROTOCOL: "tcp"
+
+  # A comma-separated list of insecure Docker registries in the form of
+  # '&lt;HOSTNAME|IP&gt;:PORT'. Each registry must be quoted separately.
+  #
+  # Example: "docker-registry.example.com:80", "hello.example.org:443"
+  STAGER_INSECURE_DOCKER_REGISTRIES: ""
+
+  # Timeout for staging an app, in seconds.
+  STAGING_TIMEOUT: "900"
+
+  # Support contact information for the cluster
+  SUPPORT_ADDRESS: "support@example.com"
+
+  # TCP routing domain of the SCF cluster; only used for testing;
+  # Example: tcp.my-scf-cluster.com
+  TCP_DOMAIN: ~
+
+  # Concatenation of trusted CA certificates to be made available on the cell.
+  TRUSTED_CERTS: ~
+
+  # The host name of the UAA server (root zone)
+  UAA_HOST: ~
+
+  # The tcp port the UAA server (root zone) listens on for requests.
+  UAA_PORT: "2793"
+
+  # Whether or not to use privileged containers for buildpack based
+  # applications. Containers with a docker-image-based rootfs will continue to
+  # always be unprivileged.
+  USE_DIEGO_PRIVILEGED_CONTAINERS: "false"
+
+  # Whether or not to use privileged containers for staging tasks.
+  USE_STAGER_PRIVILEGED_CONTAINERS: "false"
+
+sizing:
+  # Flag to activate high-availability mode
+  HA: false
+
+  # The api role contains the following jobs:
+  #
+  # - global-properties: Dummy BOSH job used to host global parameters that are
+  #   required to configure SCF
+  #
+  # - authorize-internal-ca: Install both internal and UAA CA certificates
+  #
+  # - patch-properties: Dummy BOSH job used to host parameters that are used in
+  #   SCF patches for upstream bugs
+  #
+  # - cloud_controller_ng: The Cloud Controller provides primary Cloud Foundry
+  #   API that is by the CF CLI. The Cloud Controller uses a database to keep
+  #   tables for organizations, spaces, apps, services, service instances, user
+  #   roles, and more. Typically multiple instances of Cloud Controller are load
+  #   balanced.
+  #
+  # - route_registrar: Used for registering routes
+  #
+  # Also: metron_agent, statsd_injector, go-buildpack, binary-buildpack,
+  # nodejs-buildpack, ruby-buildpack, php-buildpack, python-buildpack,
+  # staticfile-buildpack, java-buildpack, dotnet-core-buildpack
+  api:
+    # Node affinity rules can be specified here
+    affinity: {}
+
+    # The api role can scale between 1 and 65535 instances.
+    # For high availability it needs at least 2 instances.
+    count: 1
+
+    # Unit [millicore]
+    cpu:
+      request: 4000
+      limit: ~
+
+    # Unit [MiB]
+    memory:
+      request: 2421
+      limit: ~
+
+  # The blobstore role contains the following jobs:
+  #
+  # - global-properties: Dummy BOSH job used to host global parameters that are
+  #   required to configure SCF
+  #
+  # - route_registrar: Used for registering routes
+  #
+  # Also: blobstore, metron_agent
+  blobstore:
+    # Node affinity rules can be specified here
+    affinity: {}
+
+    # The blobstore role cannot be scaled.
+    count: 1
+
+    # Unit [millicore]
+    cpu:
+      request: 2000
+      limit: ~
+
+    disk_sizes:
+      blobstore_data: 50
+
+    # Unit [MiB]
+    memory:
+      request: 420
+      limit: ~
+
+  # The cc-clock role contains the following jobs:
+  #
+  # - global-properties: Dummy BOSH job used to host global parameters that are
+  #   required to configure SCF
+  #
+  # - authorize-internal-ca: Install both internal and UAA CA certificates
+  #
+  # - cloud_controller_clock: The Cloud Controller clock periodically schedules
+  #   Cloud Controller clean up tasks for app usage events, audit events, failed
+  #   jobs, and more. Only single instance of this job is necessary.
+  #
+  # Also: metron_agent, statsd_injector
+  cc_clock:
+    # Node affinity rules can be specified here
+    affinity: {}
+
+    # The cc-clock role cannot be scaled.
+    count: 1
+
+    # Unit [millicore]
+    cpu:
+      request: 2000
+      limit: ~
+
+    # Unit [MiB]
+    memory:
+      request: 789
+      limit: ~
+
+  # The cc-uploader role contains the following jobs:
+  #
+  # - global-properties: Dummy BOSH job used to host global parameters that are
+  #   required to configure SCF
+  #
+  # - authorize-internal-ca: Install both internal and UAA CA certificates
+  #
+  # Also: tps, cc_uploader, metron_agent
+  cc_uploader:
+    # Node affinity rules can be specified here
+    affinity: {}
+
+    # The cc-uploader role can scale between 1 and 3 instances.
+    # For high availability it needs at least 2 instances.
+    count: 1
+
+    # Unit [millicore]
+    cpu:
+      request: 4000
+      limit: ~
+
+    # Unit [MiB]
+    memory:
+      request: 129
+      limit: ~
+
+  # The cc-worker role contains the following jobs:
+  #
+  # - global-properties: Dummy BOSH job used to host global parameters that are
+  #   required to configure SCF
+  #
+  # - authorize-internal-ca: Install both internal and UAA CA certificates
+  #
+  # - cloud_controller_worker: Cloud Controller worker processes background
+  #   tasks submitted via the.
+  #
+  # Also: metron_agent
+  cc_worker:
+    # Node affinity rules can be specified here
+    affinity: {}
+
+    # The cc-worker role can scale between 1 and 65535 instances.
+    # For high availability it needs at least 2 instances.
+    count: 1
+
+    # Unit [millicore]
+    cpu:
+      request: 2000
+      limit: ~
+
+    # Unit [MiB]
+    memory:
+      request: 753
+      limit: ~
+
+  # The cf-usb role contains the following jobs:
+  #
+  # - global-properties: Dummy BOSH job used to host global parameters that are
+  #   required to configure SCF
+  #
+  # - authorize-internal-ca: Install both internal and UAA CA certificates
+  #
+  # - route_registrar: Used for registering routes
+  #
+  # Also: cf-usb
+  cf_usb:
+    # Node affinity rules can be specified here
+    affinity: {}
+
+    # The cf-usb role can scale between 1 and 3 instances.
+    # For high availability it needs at least 2 instances.
+    count: 1
+
+    # Unit [millicore]
+    cpu:
+      request: 2000
+      limit: ~
+
+    # Unit [MiB]
+    memory:
+      request: 117
+      limit: ~
+
+  # Global CPU configuration
+  cpu:
+    # Flag to activate cpu requests
+    requests: false
+
+    # Flag to activate cpu limits
+    limits: false
+
+  # The diego-access role contains the following jobs:
+  #
+  # - global-properties: Dummy BOSH job used to host global parameters that are
+  #   required to configure SCF
+  #
+  # - authorize-internal-ca: Install both internal and UAA CA certificates
+  #
+  # Also: ssh_proxy, metron_agent, file_server
+  diego_access:
+    # Node affinity rules can be specified here
+    affinity: {}
+
+    # The diego-access role can scale between 1 and 3 instances.
+    # For high availability it needs at least 2 instances.
+    count: 1
+
+    # Unit [millicore]
+    cpu:
+      request: 2000
+      limit: ~
+
+    # Unit [MiB]
+    memory:
+      request: 123
+      limit: ~
+
+  # The diego-api role contains the following jobs:
+  #
+  # - global-properties: Dummy BOSH job used to host global parameters that are
+  #   required to configure SCF
+  #
+  # - authorize-internal-ca: Install both internal and UAA CA certificates
+  #
+  # Also: bbs, metron_agent
+  diego_api:
+    # Node affinity rules can be specified here
+    affinity: {}
+
+    # The diego-api role can scale between 1 and 3 instances.
+    # The instance count must be an odd number (not divisible by 2).
+    # For high availability it needs at least 3 instances.
+    count: 1
+
+    # Unit [millicore]
+    cpu:
+      request: 2000
+      limit: ~
+
+    # Unit [MiB]
+    memory:
+      request: 138
+      limit: ~
+
+  # The diego-brain role contains the following jobs:
+  #
+  # - global-properties: Dummy BOSH job used to host global parameters that are
+  #   required to configure SCF
+  #
+  # - authorize-internal-ca: Install both internal and UAA CA certificates
+  #
+  # Also: auctioneer, metron_agent
+  diego_brain:
+    # Node affinity rules can be specified here
+    affinity: {}
+
+    # The diego-brain role can scale between 1 and 3 instances.
+    # For high availability it needs at least 2 instances.
+    count: 1
+
+    # Unit [millicore]
+    cpu:
+      request: 4000
+      limit: ~
+
+    # Unit [MiB]
+    memory:
+      request: 99
+      limit: ~
+
+  # The diego-cell role contains the following jobs:
+  #
+  # - global-properties: Dummy BOSH job used to host global parameters that are
+  #   required to configure SCF
+  #
+  # - authorize-internal-ca: Install both internal and UAA CA certificates
+  #
+  # - wait-for-uaa: Wait for UAA to be ready before starting any jobs
+  #
+  # Also: rep, route_emitter, garden, cflinuxfs2-rootfs-setup,
+  # opensuse42-rootfs-setup, cf-sle12-setup, metron_agent, nfsv3driver
+  diego_cell:
+    # Node affinity rules can be specified here
+    affinity: {}
+
+    # The diego-cell role can scale between 1 and 254 instances.
+    # For high availability it needs at least 3 instances.
+    count: 1
+
+    # Unit [millicore]
+    cpu:
+      request: 4000
+      limit: ~
+
+    disk_sizes:
+      grootfs_data: 50
+
+    # Unit [MiB]
+    memory:
+      request: 4677
+      limit: ~
+
+  # The diego-locket role contains the following jobs:
+  #
+  # - global-properties: Dummy BOSH job used to host global parameters that are
+  #   required to configure SCF
+  #
+  # - authorize-internal-ca: Install both internal and UAA CA certificates
+  #
+  # Also: locket, metron_agent
+  diego_locket:
+    # Node affinity rules can be specified here
+    affinity: {}
+
+    # The diego-locket role can scale between 1 and 3 instances.
+    # For high availability it needs at least 3 instances.
+    count: 1
+
+    # Unit [millicore]
+    cpu:
+      request: 2000
+      limit: ~
+
+    # Unit [MiB]
+    memory:
+      request: 90
+      limit: ~
+
+  # The doppler role contains the following jobs:
+  #
+  # - global-properties: Dummy BOSH job used to host global parameters that are
+  #   required to configure SCF
+  #
+  # Also: doppler, metron_agent
+  doppler:
+    # Node affinity rules can be specified here
+    affinity: {}
+
+    # The doppler role can scale between 1 and 65535 instances.
+    # For high availability it needs at least 2 instances.
+    count: 1
+
+    # Unit [millicore]
+    cpu:
+      request: 2000
+      limit: ~
+
+    # Unit [MiB]
+    memory:
+      request: 390
+      limit: ~
+
+  # The loggregator role contains the following jobs:
+  #
+  # - global-properties: Dummy BOSH job used to host global parameters that are
+  #   required to configure SCF
+  #
+  # - authorize-internal-ca: Install both internal and UAA CA certificates
+  #
+  # - route_registrar: Used for registering routes
+  #
+  # Also: loggregator_trafficcontroller, metron_agent
+  loggregator:
+    # Node affinity rules can be specified here
+    affinity: {}
+
+    # The loggregator role can scale between 1 and 65535 instances.
+    # For high availability it needs at least 2 instances.
+    count: 1
+
+    # Unit [millicore]
+    cpu:
+      request: 2000
+      limit: ~
+
+    # Unit [MiB]
+    memory:
+      request: 153
+      limit: ~
+
+  # Global memory configuration
+  memory:
+    # Flag to activate memory requests
+    requests: false
+
+    # Flag to activate memory limits
+    limits: false
+
+  # The mysql role contains the following jobs:
+  #
+  # - global-properties: Dummy BOSH job used to host global parameters that are
+  #   required to configure SCF
+  #
+  # - patch-properties: Dummy BOSH job used to host parameters that are used in
+  #   SCF patches for upstream bugs
+  #
+  # Also: mysql
+  mysql:
+    # Node affinity rules can be specified here
+    affinity: {}
+
+    # The mysql role can scale between 1 and 3 instances.
+    # For high availability it needs at least 2 instances.
+    count: 1
+
+    # Unit [millicore]
+    cpu:
+      request: 2000
+      limit: ~
+
+    disk_sizes:
+      mysql_data: 20
+
+    # Unit [MiB]
+    memory:
+      request: 2841
+      limit: ~
+
+  # The mysql-proxy role contains the following jobs:
+  #
+  # - global-properties: Dummy BOSH job used to host global parameters that are
+  #   required to configure SCF
+  #
+  # - patch-properties: Dummy BOSH job used to host parameters that are used in
+  #   SCF patches for upstream bugs
+  #
+  # Also: proxy
+  mysql_proxy:
+    # Node affinity rules can be specified here
+    affinity: {}
+
+    # The mysql-proxy role can scale between 1 and 3 instances.
+    # For high availability it needs at least 2 instances.
+    count: 1
+
+    # Unit [millicore]
+    cpu:
+      request: 2000
+      limit: ~
+
+    # Unit [MiB]
+    memory:
+      request: 63
+      limit: ~
+
+  # The nats role contains the following jobs:
+  #
+  # - global-properties: Dummy BOSH job used to host global parameters that are
+  #   required to configure SCF
+  #
+  # - nats: The NATS server provides publish-subscribe messaging system for the
+  #   Cloud Controller, the DEA , HM9000, and other Cloud Foundry components.
+  #
+  # Also: metron_agent
+  nats:
+    # Node affinity rules can be specified here
+    affinity: {}
+
+    # The nats role can scale between 1 and 3 instances.
+    # For high availability it needs at least 2 instances.
+    count: 1
+
+    # Unit [millicore]
+    cpu:
+      request: 2000
+      limit: ~
+
+    # Unit [MiB]
+    memory:
+      request: 60
+      limit: ~
+
+  # The nfs-broker role contains the following jobs:
+  #
+  # - global-properties: Dummy BOSH job used to host global parameters that are
+  #   required to configure SCF
+  #
+  # - authorize-internal-ca: Install both internal and UAA CA certificates
+  #
+  # Also: metron_agent, nfsbroker
+  nfs_broker:
+    # Node affinity rules can be specified here
+    affinity: {}
+
+    # The nfs-broker role can scale between 1 and 3 instances.
+    count: 1
+
+    # Unit [millicore]
+    cpu:
+      request: 2000
+      limit: ~
+
+    # Unit [MiB]
+    memory:
+      request: 63
+      limit: ~
+
+  # The post-deployment-setup role contains the following jobs:
+  #
+  # - global-properties: Dummy BOSH job used to host global parameters that are
+  #   required to configure SCF
+  #
+  # - authorize-internal-ca: Install both internal and UAA CA certificates
+  #
+  # - uaa-create-user: Create the initial user in UAA
+  #
+  # - configure-scf: Uses the cf CLI to configure SCF once it's online (things
+  #   like proxy settings, service brokers, etc.)
+  post_deployment_setup:
+    # Node affinity rules can be specified here
+    affinity: {}
+
+    # The post-deployment-setup role cannot be scaled.
+    count: 1
+
+    # Unit [millicore]
+    cpu:
+      request: 1000
+      limit: ~
+
+    # Unit [MiB]
+    memory:
+      request: 256
+      limit: ~
+
+  # The router role contains the following jobs:
+  #
+  # - global-properties: Dummy BOSH job used to host global parameters that are
+  #   required to configure SCF
+  #
+  # - authorize-internal-ca: Install both internal and UAA CA certificates
+  #
+  # - gorouter: Gorouter maintains a dynamic routing table based on updates
+  #   received from NATS and (when enabled) the Routing API. This routing table
+  #   maps URLs to backends. The router finds the URL in the routing table that
+  #   most closely matches the host header of the request and load balances
+  #   across the associated backends.
+  #
+  # Also: metron_agent
+  router:
+    # Node affinity rules can be specified here
+    affinity: {}
+
+    # The router role can scale between 1 and 65535 instances.
+    # For high availability it needs at least 2 instances.
+    count: 1
+
+    # Unit [millicore]
+    cpu:
+      request: 4000
+      limit: ~
+
+    # Unit [MiB]
+    memory:
+      request: 135
+      limit: ~
+
+  # The routing-api role contains the following jobs:
+  #
+  # - global-properties: Dummy BOSH job used to host global parameters that are
+  #   required to configure SCF
+  #
+  # - authorize-internal-ca: Install both internal and UAA CA certificates
+  #
+  # Also: metron_agent, routing-api
+  routing_api:
+    # Node affinity rules can be specified here
+    affinity: {}
+
+    # The routing-api role can scale between 1 and 3 instances.
+    # For high availability it needs at least 2 instances.
+    count: 1
+
+    # Unit [millicore]
+    cpu:
+      request: 4000
+      limit: ~
+
+    # Unit [MiB]
+    memory:
+      request: 114
+      limit: ~
+
+  # The secret-generation role contains the following jobs:
+  #
+  # - generate-secrets: This job will generate the secrets for the cluster
+  secret_generation:
+    # Node affinity rules can be specified here
+    affinity: {}
+
+    # The secret-generation role cannot be scaled.
+    count: 1
+
+    # Unit [millicore]
+    cpu:
+      request: 1000
+      limit: ~
+
+    # Unit [MiB]
+    memory:
+      request: 256
+      limit: ~
+
+  # The syslog-adapter role contains the following jobs:
+  #
+  # - global-properties: Dummy BOSH job used to host global parameters that are
+  #   required to configure SCF
+  #
+  # Also: adapter, metron_agent
+  syslog_adapter:
+    # Node affinity rules can be specified here
+    affinity: {}
+
+    # The syslog-adapter role can scale between 1 and 65535 instances.
+    # For high availability it needs at least 2 instances.
+    count: 1
+
+    # Unit [millicore]
+    cpu:
+      request: 2000
+      limit: ~
+
+    # Unit [MiB]
+    memory:
+      request: 78
+      limit: ~
+
+  # The syslog-rlp role contains the following jobs:
+  #
+  # - global-properties: Dummy BOSH job used to host global parameters that are
+  #   required to configure SCF
+  #
+  # Also: metron_agent, reverse_log_proxy
+  syslog_rlp:
+    # Node affinity rules can be specified here
+    affinity: {}
+
+    # The syslog-rlp role can scale between 1 and 65535 instances.
+    # For high availability it needs at least 2 instances.
+    count: 1
+
+    # Unit [millicore]
+    cpu:
+      request: 2000
+      limit: ~
+
+    # Unit [MiB]
+    memory:
+      request: 93
+      limit: ~
+
+  # The syslog-scheduler role contains the following jobs:
+  #
+  # - global-properties: Dummy BOSH job used to host global parameters that are
+  #   required to configure SCF
+  #
+  # Also: scheduler, metron_agent
+  syslog_scheduler:
+    # Node affinity rules can be specified here
+    affinity: {}
+
+    # The syslog-scheduler role cannot be scaled.
+    count: 1
+
+    # Unit [millicore]
+    cpu:
+      request: 2000
+      limit: ~
+
+    # Unit [MiB]
+    memory:
+      request: 69
+      limit: ~
+
+  # The tcp-router role contains the following jobs:
+  #
+  # - global-properties: Dummy BOSH job used to host global parameters that are
+  #   required to configure SCF
+  #
+  # - authorize-internal-ca: Install both internal and UAA CA certificates
+  #
+  # - wait-for-uaa: Wait for UAA to be ready before starting any jobs
+  #
+  # Also: tcp_router, metron_agent
+  tcp_router:
+    # Node affinity rules can be specified here
+    affinity: {}
+
+    # The tcp-router role can scale between 1 and 3 instances.
+    # For high availability it needs at least 2 instances.
+    count: 1
+
+    # Unit [millicore]
+    cpu:
+      request: 2000
+      limit: ~
+
+    # Unit [MiB]
+    memory:
+      request: 99
+      limit: ~
+
+    ports:
+      tcp_route:
+        count: 9
+
+secrets:
+  # The password for the cluster administrator.
+  # This value is immutable and must not be changed once set.
+  CLUSTER_ADMIN_PASSWORD: ~
+
+  # LDAP service account password (required for LDAP integration only)
+  # This value is immutable and must not be changed once set.
+  PERSI_NFS_DRIVER_LDAP_PASSWORD: "-"
+
+  # The password of the admin client - a client named admin with uaa.admin as an
+  # authority.
+  # This value is immutable and must not be changed once set.
+  UAA_ADMIN_CLIENT_SECRET: ~
+
+  # The CA certificate for UAA
+  UAA_CA_CERT: ~
+
+  # PEM encoded RSA private key used to identify host.
+  # This value uses a generated default.
+  APP_SSH_KEY: ~
+
+  # MD5 fingerprint of the host key of the SSH proxy that brokers connections to
+  # application instances.
+  # This value uses a generated default.
+  APP_SSH_KEY_FINGERPRINT: ~
+
+  # PEM-encoded certificate
+  # This value uses a generated default.
+  AUCTIONEER_REP_CERT: ~
+
+  # PEM-encoded key
+  # This value uses a generated default.
+  AUCTIONEER_REP_KEY: ~
+
+  # PEM-encoded server certificate
+  # This value uses a generated default.
+  AUCTIONEER_SERVER_CERT: ~
+
+  # PEM-encoded server key
+  # This value uses a generated default.
+  AUCTIONEER_SERVER_KEY: ~
+
+  # PEM-encoded certificate
+  # This value uses a generated default.
+  BBS_AUCTIONEER_CERT: ~
+
+  # PEM-encoded key
+  # This value uses a generated default.
+  BBS_AUCTIONEER_KEY: ~
+
+  # PEM-encoded client certificate.
+  # This value uses a generated default.
+  BBS_CLIENT_CRT: ~
+
+  # PEM-encoded client key.
+  # This value uses a generated default.
+  BBS_CLIENT_KEY: ~
+
+  # PEM-encoded certificate
+  # This value uses a generated default.
+  BBS_REP_CERT: ~
+
+  # PEM-encoded key
+  # This value uses a generated default.
+  BBS_REP_KEY: ~
+
+  # PEM-encoded client certificate.
+  # This value uses a generated default.
+  BBS_SERVER_CRT: ~
+
+  # PEM-encoded client key.
+  # This value uses a generated default.
+  BBS_SERVER_KEY: ~
+
+  # The PEM-encoded certificate (optionally as a certificate chain) for serving
+  # blobs over TLS/SSL.
+  # This value uses a generated default.
+  BLOBSTORE_TLS_CERT: ~
+
+  # The PEM-encoded private key for signing TLS/SSL traffic.
+  # This value uses a generated default.
+  BLOBSTORE_TLS_KEY: ~
+
+  # The PEM-encoded certificate for internal cloud controller traffic.
+  # This value uses a generated default.
+  CC_SERVER_CRT: ~
+
+  # The PEM-encoded private key for internal cloud controller traffic.
+  # This value uses a generated default.
+  CC_SERVER_KEY: ~
+
+  # The PEM-encoded certificate for internal cloud controller uploader traffic.
+  # This value uses a generated default.
+  CC_UPLOADER_CRT: ~
+
+  # The PEM-encoded private key for internal cloud controller uploader traffic.
+  # This value uses a generated default.
+  CC_UPLOADER_KEY: ~
+
+  # PEM-encoded broker server certificate.
+  # This value uses a generated default.
+  CF_USB_BROKER_SERVER_CERT: ~
+
+  # PEM-encoded broker server key.
+  # This value uses a generated default.
+  CF_USB_BROKER_SERVER_KEY: ~
+
+  # PEM-encoded client certificate
+  # This value uses a generated default.
+  DIEGO_CLIENT_CERT: ~
+
+  # PEM-encoded client key
+  # This value uses a generated default.
+  DIEGO_CLIENT_KEY: ~
+
+  # PEM-encoded certificate.
+  # This value uses a generated default.
+  DOPPLER_CERT: ~
+
+  # PEM-encoded key.
+  # This value uses a generated default.
+  DOPPLER_KEY: ~
+
+  # PEM-encoded CA certificate used to sign the TLS certificate used by all
+  # components to secure their communications.
+  # This value uses a generated default.
+  INTERNAL_CA_CERT: ~
+
+  # PEM-encoded CA key.
+  # This value uses a generated default.
+  INTERNAL_CA_KEY: ~
+
+  # PEM-encoded certificate.
+  # This value uses a generated default.
+  METRON_CERT: ~
+
+  # PEM-encoded key.
+  # This value uses a generated default.
+  METRON_KEY: ~
+
+  # PEM-encoded server certificate
+  # This value uses a generated default.
+  REP_SERVER_CERT: ~
+
+  # PEM-encoded server key
+  # This value uses a generated default.
+  REP_SERVER_KEY: ~
+
+  # The public ssl cert for ssl termination.
+  # This value uses a generated default.
+  ROUTER_SSL_CERT: ~
+
+  # The private ssl key for ssl termination.
+  # This value uses a generated default.
+  ROUTER_SSL_KEY: ~
+
+  # PEM-encoded certificate
+  # This value uses a generated default.
+  SYSLOG_ADAPT_CERT: ~
+
+  # PEM-encoded key.
+  # This value uses a generated default.
+  SYSLOG_ADAPT_KEY: ~
+
+  # PEM-encoded certificate
+  # This value uses a generated default.
+  SYSLOG_RLP_CERT: ~
+
+  # PEM-encoded key.
+  # This value uses a generated default.
+  SYSLOG_RLP_KEY: ~
+
+  # PEM-encoded certificate
+  # This value uses a generated default.
+  SYSLOG_SCHED_CERT: ~
+
+  # PEM-encoded key.
+  # This value uses a generated default.
+  SYSLOG_SCHED_KEY: ~
+
+  # PEM-encoded client certificate for internal communication between the cloud
+  # controller and TPS.
+  # This value uses a generated default.
+  TPS_CC_CLIENT_CRT: ~
+
+  # PEM-encoded client key for internal communication between the cloud
+  # controller and TPS.
+  # This value uses a generated default.
+  TPS_CC_CLIENT_KEY: ~
+
+  # PEM-encoded certificate for communication with the traffic controller of the
+  # log infra structure.
+  # This value uses a generated default.
+  TRAFFICCONTROLLER_CERT: ~
+
+  # PEM-encoded key for communication with the traffic controller of the log
+  # infra structure.
+  # This value uses a generated default.
+  TRAFFICCONTROLLER_KEY: ~
+
+services:
+  loadbalanced: false
+kube:
+  external_ips: []
+  # Increment this counter to rotate all generated secrets
+  secrets_generation_counter: 1
+  storage_class:
+    persistent: "persistent"
+    shared: "shared"
+  registry:
+    hostname: "registry.suse.com"
+    username: ""
+    password: ""
+  organization: "cap"
+  auth: "rbac"</pre></div></div></div></div><div class="page-bottom"><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
+        2019 
+        SUSE</p><ul><li><a href="http://www.suse.com/company/careers/" target="_top">Careers</a></li><li><a href="http://www.suse.com/company/legal/" target="_top">Legal</a></li><li><a href="http://www.suse.com/company/" target="_top">About</a></li><li><a href="http://www.suse.com/ContactsOffices/contacts_offices.jsp" target="_top">Contact Us</a></li></ul></div></div></body></html>
